@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://www.w3.org/Tools/respec/respec-w3c" async class="remove"></script>
+    <title>UO Sensor Networks</title>
+    <script class="remove">
+      var respecConfig = {
+        specStatus: "unofficial",
+        subtitle: "Interoperability in real-time systems of sensors and services",
+        shortName: "short-name",
+        editors: [{
+          name: "Luke Smith",
+          company: "Newcastle University",
+          companyURL: "https://www.ncl.ac.uk/",
+          url: "https://www.ncl.ac.uk/engineering/staff/profile/lukesmith.html",
+        }],
+        authors: [{
+          name: "Simon Bell",
+          company: "University of Birmingham",
+          companyURL: "https://www.birmingham.ac.uk/",
+          url: "https://www.birmingham.ac.uk/schools/gees/people/profile.aspx?ReferenceId=96947&Name=dr-simon-bell"
+        }, {
+          name: "Aare Puussaar",
+          company: "Newcastle University",
+          companyURL: "https://www.ncl.ac.uk/",
+          url: "https://github.com/aarepuu"
+        }],
+        license: "cc-by",
+        logos: [{
+          src: "http://urbanobservatory.ac.uk/img/logo.svg",
+          href: "http://www.urbanobservatory.ac.uk/",
+          alt: "Urban Observatory",
+          width: 300,
+          id: "urbanobs-logo"
+        }],
+        github: "https://github.com/urbanobservatory/standards",
+        localBiblio: {
+          "hydra-core": {
+            title: "Hydra Core Vocabulary",
+            href: "https://www.hydra-cg.com/spec/latest/core/",
+            status: "UD",
+            publisher: "Hydra W3C Community Group"
+          },
+          "geojson-ld": {
+            title: "GEOJSON-LD",
+            href: "http://geojson.org/geojson-ld/",
+            status: "UD",
+            publisher: "Mapbox"
+          },
+          "CityGML": {
+            title: "OGC City Geography Markup Language (CityGML) Encoding Standard",
+            href: "https://www.opengeospatial.org/standards/citygml",
+            status: "IS",
+            publisher: "Open Geospatial Consortium"
+          },
+          "IFC": {
+            title: "Industry Foundation Classes IFC2x Edition 3 TC1",
+            href: "http://www.buildingsmart-tech.org/ifc/IFC2x3/TC1/html/index.htm",
+            status: "IS",
+            publisher: "buildingSMART"
+          }
+        },
+        doJsonLd: true
+      };
+    </script>
+    <style type="text/css">
+      html {
+        background-image: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="abstract">
+      <p>The urban observatories are a group of academic institutions across Great Britain deploying networks of sensors 
+        to facilitate science, evidence-based decision making, and the smart cities of the future. Sensors, 
+        communications networks and equipment installed by these institutions are used to provide open data, consumed 
+        by members of the public and government. The presentation of data and context for these sensor networks is the
+        scope of this document.</p>
+    </section>
+    
+    <section id="sotd">
+      <div class="issue">
+        <p>This entire document is a work in progress, and very little work has yet begun to implement the standards
+          described herein. Detail discussed may be removed or superseded without warning; you are advised to follow 
+          issues relevant to your work in <a href="https://github.com/urbanobservatory/standards/issues">this list</a> 
+          until this document is stable.</p>
+      </div>  
+    </section>
+    
+    <section class="informative">
+      <h2>Motivation and background</h2>
+
+      <p>Add introduction about interoperability being the greatest problem and a substantial burden in the use of technology
+        for improved public services and evidence-based decision making.</p>
+
+      <section id="principles" class="informative">
+        <h3>Principles</h3>
+
+        <p>Introduction here.</p>
+
+        <ol>
+          <li>It MUST be possible to discover sensors in different cities and disparate systems by following sequential
+            links from a single entrypoint to all observatories.</li>
+          <li>Data MUST be accompanied by links to <a href="https://5stardata.info/en/">relevant contextual
+            information</a>, through a machine-readable hypermedia.</li>
+          <li>Options for extensibility SHOULD be maintained and able to coexist within a single system, such as
+            provision for controllers and actuation, data provenance, and the use of related ontologies such as [[IFC]], 
+            or [[CityGML]].</li>
+          <li>Implementation MAY take any form (i.e. any sensors, any database, any underlying communications protocols),
+            provided the output and interface conforms to the standards herein.</li>
+          <li>Entities including sensors may be partitioned across multiple APIs, provided links are registered so
+            sensors can easily be founded through geographies and types.</li>
+          <li>This standard MUST be composed of existing standards, except where no viable standard exists, or two
+            standards are incompatible.</li>
+        </ol>
+      </section>
+    </section>
+
+    <section>
+      <h2>Conformance</h2>
+
+      <p>As well as sections marked as non-normative, all authoring guidelines, diagrams, examples, and notes in this 
+        specification are non-normative. Everything else in this specification is normative.</p>
+          
+      <p>The key words MAY, MUST, MUST NOT, NOT RECOMMENDED, OPTIONAL, RECOMMENDED, REQUIRED, SHALL, SHALL NOT, SHOULD, 
+        and SHOULD NOT in this document are to be interpreted as described in BCP 14 [[!RFC2119]] [[!RFC8174]] when, and
+        only when, they appear in all capitals, as shown here.</p>
+
+      <p>Data SHOULD be provided under a licence compatible with the <a href="https://opendefinition.org/">Open
+        Definition</a> unless there are overriding reasons, such as personal data or the IPR resides elsewhere</a>.</p>
+    </section>
+
+    <section id="architecture">
+      <h2>Architecture</h2>
+
+      <p>Need a comprehensive description of how this setup works in practice. The figure below shows the generalised 
+        architecture for a federated network of observatories conforming to these standards. Implementation details 
+        such as the choice of database, sensor hardware, and communications networks shown in blue are outside the scope
+        of this document; observatories are free to choose these details.</p>
+
+      <p>Each city or public-facing API therein MUST be serialised using the vocabularies described in
+        <a href="#individual-systems" class="sectionRef"></a>, with all functionality prescribed.</p>
+        
+      <p>Integration services such as APIs serving geographies shared by more than one city, MUST in addition offer the 
+        registration functionality described in <a href="#federation" class="sectionRef"></a> and SHOULD implement
+        <a href="#authentication"></a> to prevent misuse of this.</p>
+
+      <div class="illustration">
+        <p>
+          <figure>
+            <img src="figures/federated-architecture.png" 
+             alt="Architecture for an (inter)national network of observatories, linked through shared standards and 
+             registration of sensors against shared geographies" />
+            <figcaption>Architecture for an (inter)national network of observatories, linked through shared standards
+                and registration of sensors against shared geographies</figcaption>
+          </figure>
+        </p>
+      </div>
+
+      <p>It is RECOMMENDED to provide storage of data obtained from sensors in cases where brokerage cannot obtain
+        historic observations directly from the device or device's own platform (e.g. where a sensor has its own cloud
+        platform).</p>
+      <p>Implementations MAY provide direct access to sensor data through a live transformation of data obtained from 
+        the sensor or its platform, provided the eventual output is conformant. Implementations MAY provide a mixed 
+        approach, where historic data is obtained from a different endpoint to live observations.</p>
+
+      <aside class="example" title="National UO network">
+        <p>Single entry point. Geographies. Roads. Sensors for air quality. Live data. Historic timeseries.</p>
+      </aside>
+    </section>
+
+    <section id="individual-systems">
+      <h2>Individual systems</h2>
+
+      <section id="protocols">
+        <h3>Protocols</h3>
+        
+        <p>Strong preference for HTTP/2 to allow concurrent simultaneous requests to be multiplexed.</p>
+      </section>
+
+      <section id="serialisation">
+        <h3>Serialisation</h3>
+
+        <p>Should refer to [[!json-ld-syntax]] among others.</p>
+      </section>
+
+      <section id="ontologies">
+        <h3>Ontologies</h3>
+
+        <p>Should refer to [[!vocab-ssn]], [[!hydra-core]] and [[!vocab-ssn-ext]] among others.</p>
+      </section>
+
+      <section id="vocabularies">
+        <h3>Vocabularies</h3>
+
+        <p>Detail of the other vocabularies we recommend use of, such as for units and measures.</p>
+      </section>
+
+      <section id="geospatial">
+          <h3>Spatial features</h3>
+  
+          <p>Most likely some mixture of the [[!geosparql]] ontology and [[!geojson-ld]], because the latter should be 
+            interpreted as valid GeoJSON by GIS clients.</p>
+        </section>
+
+      <section id="filtering">
+        <h3>Filtering</h3>
+
+        <p>The Hydra standard doesn't currently offer any filtering, so this section will probably need to be quite 
+          substantial.</p>
+      </section>
+
+      <section id="streaming">
+        <h3>Streaming</h3>
+
+        <p>Access to live and potentially filtered data via WebSockets.</p>
+      </section>
+
+      <section id="receiver">
+        <h3>Receiver</h3>
+
+        <p>Ability to receive data directly submitted from an instrument or another system, as opposed to pulling 
+          through brokerage systems. What shape should this data take, in order that links to appropriate resources
+          could be generated automatically?</p>
+      </section>
+
+      <section id="authentication">
+        <h3>Authentication</h3>
+
+        <p>Ability to register a new relation between two IRIs will require authentication and creation of trust 
+          relationships. Likely to rely on a callback approach, one system asks for permissions on the other system,
+          and once these are granted a callback is invokved on the requesting system.</p>
+      </section>
+    </section>
+
+    <section id="federation">
+      <h2>Federation</h2>
+
+      <section id="linked-data-fragments">
+        <h3>Linked data fragments</h3>
+
+        <p>This is a way of allowing complex queries such as SPARQL against the data, without having to run a full-blown
+          SPARQL database and exposing it to the world. The problem with exposing SPARQL endpoints and hitting them
+          with POST queries for example, is the response cannot be cached. It does not work well with HTTP. Linked
+          data fragments don't have this problem.</p>
+      </section>
+
+      <section id="shared-geographies">
+        <h3>Shared geographies</h3>
+
+        <p>The proposal here is to have a national geography API and delegate authority to each city to be able to
+          register sensors against.</p>
+
+        <aside class="example" title="Shared geographies">
+          <p>The national geography API contains resources corresponding to each local authority and city region. These
+            </p>
+        </aside>
+      </section>
+
+      <section id="registration">
+        <h3>Registration</h3>
+
+        <p>Full details here on how to register a link to your own sensors or entire API in the shared geographies,
+          with discussion of the security implications and best practice.</p>
+      </section>
+    </section>
+      
+    <section id="examples" class="appendix">
+      <h2>Additional examples</h2>
+
+      <p>To be completed.</p>
+
+      <section>
+        <h3>Requests and responses for APIs</h3>
+
+        <p>This section uses two examples to illustrate how data that abides by the ontology may look, both when it is 
+          stored to a database, and when it is served to a client via the API. They are</p>
+        
+        <ol>
+          <li>air temperature measurements made by static weather stations dotted around a city (in this case
+            Birmingham), and</li>
+          <li>thermal images of buildings taken from a van-mounted camera as it drives around the city (in this case 
+            Sheffield).</li>
+        </ol>
+
+        <p>The section headings below are each names of 
+          <a href="https://www.w3.org/TR/vocab-ssn/#overview-of-classes-and-properties">[[vocab-ssn]] Ontology Classes</a>.
+          These MAY form <a href="https://docs.mongodb.com/manual/core/databases-and-collections/#collections">
+          collections</a> in a database. A collection is equivalent to a table in a relational database.</p>
+        
+        <section>
+          <h4>Deployment</h4>
+          
+          <p>This term is defined in full as part of <a href="https://www.w3.org/TR/vocab-ssn/#SSNDeployment">[[vocab-ssn]]</a>.
+            Each observatory will have a number of deployments across their respective cities investigating various
+            different research areas and work packages. Each deployment MAY have its own document in a database
+            collection called deployments.</p>
+          
+            <div class="issue">
+              <p>Should this API request and response include details of authentication and additional headers that
+                might be required?</p>
+            </div>  
+          
+          <aside class="example" title="Request and response for a single deployment stored in a NoSQL database">
+            <p>The deployment is a network of weather stations dotted across the city for 2 years. This deployment has
+              been assigned an identifier, <em>birmingham-weather-stations</em>.</p>
+
+            <p>Given the following database document:</p>
+
+            <pre>
+            {
+              "id": "birmingham-weather-stations", 
+              "name": "Birmingham Weather Stations",
+              "description": "A network of static weather stations located on tripods, and street 
+                furniture, across Birmingham for 2 years."
+            }
+            </pre>
+
+            <aside class="note" title="Requirements for IDs used in JSON-LD responses">
+              <p>The <code>@id</code> provided in the JSON-LD responses is an IRI, and as such must conform to the 
+                character restrictions in [[RFC3987]]. These IRIs are therefore unique across all observatories, but each
+                system is responsible for enforcing a unique constraint on paths under its domain.</p>
+            </aside>
+
+            <p>The following request should generate this conformant response:</p>
+
+            <pre>GET https://api.urbanobservatory/birmingham/deployments/birmingham-weather-stations</pre>
+            
+            <pre>
+            {
+              "@context": {
+                "schema": "https://schema.org/",
+                "ssn": "http://www.w3.org/ns/ssn/",
+                "name": "schema:name",
+                "description": "schema:description"
+              },
+              "@id": "https://api.urbanobservatory/birmingham/deployments/birmingham-weather-stations",
+              "@type": "ssn:Deployment",
+              "name": "Birmingham Weather Stations",
+              "description": "A network of static weather stations located on tripods, and street
+                furniture, across Birmingham for 2 years."
+            }
+            </pre>
+          </aside>
+          
+      </section>
+    </section>
+  </body>
+</html>
