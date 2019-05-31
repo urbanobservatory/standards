@@ -59,6 +59,19 @@
             href: "http://www.buildingsmart-tech.org/ifc/IFC2x3/TC1/html/index.htm",
             status: "IS",
             publisher: "buildingSMART"
+          },
+          "REST": {
+            title: "REST: Architectural Styles and the Design of Network-based Software Architectures",
+            author: "Roy Thomas Fielding",
+            status: "PhD thesis",
+            publisher: "University of California, Irvine",
+            date: "2000",
+            id: "rest"
+          },
+          "GS CIM 009": {
+            title: "ETSI GS CIM 009 v1.1.1 Context Information Management",
+            href: "https://www.etsi.org/newsroom/press-releases/1519-2019-01-etsi-cim-group-releases-full-feature-specification-for-context-information-exchange-in-smart-cities",
+            publisher: "ETSI Industry Specification Group"
           }
         },
         doJsonLd: true
@@ -91,8 +104,54 @@
     <section class="informative">
       <h2>Motivation and background</h2>
 
-      <p>Add introduction about interoperability being the greatest problem and a substantial burden in the use of technology
-        for improved public services and evidence-based decision making.</p>
+      <p>Networks of urban sensors are increasingly prevalent. There are many uses for these devices connected to the
+        Internet of Things, such as sharing car park occupancy, pollution management, weather forecasting, public safety,
+        and visitor statistics. These networks often form part of a service provision, such as receiving payment for
+        parking services, enforcement of road user charging schemes, or the timely emptying of public bins. Developing
+        new services which consume and provide this data, for example using real-time bus locations to forecast arrival
+        times, would likely depend on a vendor- or domain-specific implementation, consuming data from APIs based on
+        their documented methods and interfaces.</p>
+
+      <p>There are no widely accepted standards for interoperability in the Internet of Things, that would allow a
+        service to operate using data from different sources, without changes in code. Recent efforts to develop
+        appropriate standards, such as [[wot-architecture]] have addressed some of these issues with a prescriptive
+        schema [[wot-thing-description]] containing a device's properties, interactions, actions and events.
+        The emphasis on interactions rather than data means this standard does not align with sensor ontologies,
+        such as [[vocab-ssn]] and [[vocab-ssn-ext]], that provide a means for accessing historic data. The discovery
+        mechanism in [[wot-architecture]] depends on non-normative thing directories. There are numerous other standards
+        related to the operation of smart cities, such as [[GS CIM 009]] for NGSI-LD, which similarly is not aligned to
+        [[vocab-ssn]].</p>
+        
+      <p>There is a need for a standard that focuses on extensibility, reuse of established standards, and is
+        comparatively trivial to implement. The [[hydra-core]] vocabulary for example, provides an established means of
+        pagingating response data and implementing URI templates, and can easily be combined with [[vocab-ssn-ext]].</p>
+
+      <p>This document presents a proposed standard for developing <strong>federated networks of sensors and services,
+        focusing on mechanisms for discovery, obtaining real-time and historic data, and contextual data</strong>. It
+        does this primarily by clarifying the use of existing standards, resolving ambiguity and
+        omissions from these, and incorporating detailed examples. These combined create a linked federation of [[REST]] 
+        APIs, enabled by standardised hypermedia. Device and service discovery is facilitated through geographical
+        relations, with links to other comformant systems created using permissions and trust relationships.</p>
+
+      <section id="maturity" class="informative">
+        <h3>Maturity</h3>
+
+        <p>Introduction here, on the subject of a maturity model for real-time data.</p>
+
+        <ol start="0">
+          <li>Data only available through propreitary interfaces</li>
+          <li>Data available using industry standards such as BACNET, KNX, SIRI-RT</li>
+          <li>Data available using an HTTP API</li>
+          <li>Data available using a publish-subcribe model or real-time stream</li>
+          <li>Data available using an REST API with a recognised hypermedia and cross-cutting standards</li>
+          <li>Data accompanied by relevant context, such as links to geographic entities in other systems</li>
+          <li>Data is discoverable by completely automated means based on geography, beacons, or similar</li>
+          <li>Data is fully queryable by automated means, through convergence on authoritative vocabularies and their
+            adoption</li>
+        </ol>
+
+        <p>Another model for services?</p>
+      </section>
 
       <section id="principles" class="informative">
         <h3>Principles</h3>
@@ -101,7 +160,7 @@
 
         <ol>
           <li>It MUST be possible to discover sensors in different cities and disparate systems by following sequential
-            links from a single entrypoint to all observatories.</li>
+            links from a single national or international entrypoint.</li>
           <li>Data MUST be accompanied by links to <a href="https://5stardata.info/en/">relevant contextual
             information</a>, through a machine-readable hypermedia.</li>
           <li>Options for extensibility SHOULD be maintained and able to coexist within a single system, such as
