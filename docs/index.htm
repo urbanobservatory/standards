@@ -107,26 +107,32 @@
       <p>Networks of urban sensors are increasingly prevalent. There are many uses for these devices connected to the
         Internet of Things, such as sharing car park occupancy, pollution management, weather forecasting, public safety,
         and visitor statistics. These networks often form part of a service provision, such as receiving payment for
-        parking services, enforcement of road user charging schemes, or the timely emptying of public bins. Developing
-        new services which consume and provide this data, for example using real-time bus locations to forecast arrival
-        times, would likely depend on a vendor- or domain-specific implementation, consuming data from APIs based on
-        their documented methods and interfaces.</p>
+        parking services, enforcement of road user charging schemes, or the timely emptying of public bins. Elements of
+        these applications are frequently referred to as smart city technologies, but many sensor networks have long
+        histories, such as CCTV networks. Developing new services which consume and provide processed and derivative
+        data, for example using real-time bus locations to forecast arrival times, would likely depend on a vendor- or
+        domain-specific implementation, consuming data from APIs based on their documented methods and interfaces.</p>
+        
+      <p>There is a need for a standard that focuses on extensibility, reuse of established standards, and is
+        comparatively trivial to implement as a layer on top of existing software and services. The [[hydra-core]]
+        vocabulary for example, provides an established means of pagingating response data and implementing URI
+        templates, and can easily be combined with [[vocab-ssn-ext]]. The ontologies recommended in this document are
+        selected because of their relevance to real-time sensor networks, but it should be possible to combine this
+        approach with other standards such as PAS 180 and ISO/IEC 30182:2017 Smart City Vocabulary, or elements of
+        JSON Schema or OpenAPI to enhance client-side validation. There are numerous domain-specific data models, such
+        as the SIRI (CEN/TS 14431-1:2015) and TransXChange used in public transport services; these vocabularies and
+        ontologies can be used alongside this standard, though the serialisation of data may vary.</p>
 
       <p>There are no widely accepted standards for interoperability in the Internet of Things, that would allow a
         service to operate using data from different sources, without changes in code. Recent efforts to develop
-        appropriate standards, such as [[wot-architecture]] have addressed some of these issues with a prescriptive
-        schema, [[wot-thing-description]], containing a device's properties, interactions, actions and events.
-        The emphasis on interactions rather than data means this standard does not align with sensor ontologies,
-        such as [[vocab-ssn]], that provide a means for accessing historic data. The discovery
-        mechanism in [[wot-architecture]] depends on non-normative thing directories. There are numerous other standards
-        related to the operation of smart cities, such as [[ngsi-ld]], which similarly is not aligned to
-        [[vocab-ssn]].</p>
-        
-      <p>There is a need for a standard that focuses on extensibility, reuse of established standards, and is
-        comparatively trivial to implement. The [[hydra-core]] vocabulary for example, provides an established means of
-        pagingating response data and implementing URI templates, and can easily be combined with [[vocab-ssn-ext]].</p>
+        appropriate standards, such as [[wot-architecture]] have addressed many issues, but are intended to describe
+        the connected devices in their entirety, ranging from internet gateways through to communication using CoAP.
+        There are similarities between the standard herein and [[ngsi-ld]], but we present an approach that uses
+        a machine-readable documentation to describe possible interactions with properties and operations on types.
+        Crucially, no prior knowledge of the API beyond a client with understanding of the hypermedia is required, which
+        is used as the engine of application state (HATEOAS), to create a RESTful API.</p>
 
-      <p>This document presents a proposed standard for developing <strong>federated networks of sensors and services,
+      <p>This document presents a proposed standard for <strong>publishing federated networks of sensors and services,
         focusing on mechanisms for discovery, obtaining real-time and historic data, and contextual data</strong>. It
         does this primarily by clarifying the use of existing standards, resolving ambiguity and
         omissions from these, and incorporating detailed examples. These combined create a linked federation of [[REST]] 
