@@ -68,7 +68,7 @@
             date: "2000",
             id: "rest"
           },
-          "NGSI-LD": {
+          "ngsi-ld": {
             title: "ETSI GS CIM 009 v1.1.1 Context Information Management",
             href: "https://www.etsi.org/newsroom/press-releases/1519-2019-01-etsi-cim-group-releases-full-feature-specification-for-context-information-exchange-in-smart-cities",
             publisher: "ETSI Industry Specification Group"
@@ -111,26 +111,29 @@
         these applications are frequently referred to as smart city technologies, but many sensor networks have long
         histories, such as CCTV networks. Developing new services which consume and provide processed and derivative
         data, for example using real-time bus locations to forecast arrival times, would likely depend on a vendor- or
-        domain-specific implementation, consuming data from APIs based on their documented methods and interfaces.</p>
+        domain-specific implementation, consuming data from APIs based on their documented methods and interfaces, and
+        thereby constraining the code to a single data model.</p>
         
       <p>There is a need for a standard that focuses on extensibility, reuse of established standards, and is
         comparatively trivial to implement as a layer on top of existing software and services. The [[hydra-core]]
         vocabulary for example, provides an established means of pagingating response data and implementing URI
         templates, and can easily be combined with [[vocab-ssn-ext]]. The ontologies recommended in this document are
         selected because of their relevance to real-time sensor networks, but it should be possible to combine this
-        approach with other standards such as PAS 180 and ISO/IEC 30182:2017 Smart City Vocabulary, or elements of
-        JSON Schema or OpenAPI to enhance client-side validation. There are numerous domain-specific data models, such
-        as the SIRI (CEN/TS 14431-1:2015) and TransXChange used in public transport services; these vocabularies and
-        ontologies can be used alongside this standard, though the serialisation of data may vary.</p>
+        approach with other standards such as PAS 180 and ISO/IEC 30182:2017 Smart City Vocabulary, descriptions of the
+        built environment in [[IFC]], or [[CityGML]], or elements of JSON Schema and OpenAPI to enhance client-side
+        validation. There are numerous domain-specific data models, such as the SIRI (CEN/TS 14431-1:2015) and 
+        TransXChange used in public transport services; these vocabularies and ontologies can be used alongside this 
+        standard, though the serialisation of data may vary, but translation between these formats (e.g. JSON-LD to 
+        XML) can be automated and is relatively trivial.</p>
 
       <p>There are no widely accepted standards for interoperability in the Internet of Things, that would allow a
         service to operate using data from different sources, without changes in code. Recent efforts to develop
         appropriate standards, such as [[wot-architecture]] have addressed many issues, but are intended to describe
-        the connected devices in their entirety, ranging from internet gateways through to communication using CoAP.
+        the connected devices in their entirety, ranging from internet gateways through to communication (e.g. CoAP).
         There are similarities between the standard herein and [[ngsi-ld]], but we present an approach that uses
         a machine-readable documentation to describe possible interactions with properties and operations on types.
         Crucially, no prior knowledge of the API beyond a client with understanding of the hypermedia is required, which
-        is used as the engine of application state (HATEOAS), to create a RESTful API.</p>
+        is used as the engine of application state (HATEOAS), to satisfy the requirements of [[REST]].</p>
 
       <p>This document presents a proposed standard for <strong>publishing federated networks of sensors and services,
         focusing on mechanisms for discovery, obtaining real-time and historic data, and contextual data</strong>. It
@@ -142,14 +145,16 @@
       <section id="maturity" class="informative">
         <h3>Maturity</h3>
 
-        <p>Introduction here, on the subject of a maturity model for real-time data.</p>
+        <p>The maturity model comprises different levels that ultimately facilitate data integration across different
+          domains, systems and data models. The aim of this standard is to achieve level six and move closer towards
+          seven.</p>
 
         <ol start="0">
           <li>Data only available through propreitary interfaces</li>
-          <li>Data available using industry standards such as BACNET, KNX, SIRI-RT</li>
-          <li>Data available using an HTTP API</li>
+          <li>Data available using a single data model and domain-specific interface, such as BACNET, KNX, SIRI-RT</li>
+          <li>Data available using an HTTP(S) API with developer-focused documentation</li>
           <li>Data available using a publish-subcribe model or real-time stream</li>
-          <li>Data available using an REST API with a recognised hypermedia and cross-cutting standards</li>
+          <li>Data available using an REST API with a recognised hypermedia and cross-domain standards</li>
           <li>Data accompanied by relevant context, such as links to geographic entities in other systems</li>
           <li>Data is discoverable by completely automated means based on geography, beacons, or similar</li>
           <li>Data is fully queryable by automated means, through convergence on authoritative vocabularies and their
@@ -162,7 +167,7 @@
       <section id="principles" class="informative">
         <h3>Principles</h3>
 
-        <p>Introduction here.</p>
+        <p>This standard has been prepared to satisfy the following general principles.</p>
 
         <ol>
           <li>It MUST be possible to discover sensors in different cities and disparate systems by following sequential
@@ -170,14 +175,14 @@
           <li>Data MUST be accompanied by links to <a href="https://5stardata.info/en/">relevant contextual
             information</a>, through a machine-readable hypermedia.</li>
           <li>Options for extensibility SHOULD be maintained and able to coexist within a single system, such as
-            provision for controllers and actuation, data provenance, and the use of related ontologies such as [[IFC]], 
-            or [[CityGML]].</li>
+            provision for controllers and actuation, data provenance, and the use of related ontologies.</li>
           <li>Implementation MAY take any form (i.e. any sensors, any database, any underlying communications protocols),
             provided the output and interface conforms to the standards herein.</li>
-          <li>Entities including sensors may be partitioned across multiple APIs, provided links are registered so
-            sensors can easily be founded through geographies and types.</li>
+          <li>Entities including sensors SHOULD be partitioned across multiple APIs, provided links are registered so
+            sensors can easily be found through geographies and types.</li>
           <li>This standard MUST be composed of existing standards, except where no viable standard exists, or two
-            standards are incompatible.</li>
+            standards are incompatible. It SHOULD be possible to integrate data published with this standard with
+            a wide range of ontologies.</li>
         </ol>
       </section>
     </section>
@@ -199,17 +204,20 @@
     <section id="architecture">
       <h2>Architecture</h2>
 
-      <p>Need a comprehensive description of how this setup works in practice. The figure below shows the generalised 
-        architecture for a federated network of observatories conforming to these standards. Implementation details 
-        such as the choice of database, sensor hardware, and communications networks shown in blue are outside the scope
-        of this document; observatories are free to choose these details.</p>
+      <p>A federated approach is adopted.</p>
+        
+      <p>The figure below shows the generalised architecture for a federated network of sensors and services conforming to 
+        these standards. Implementation details such as the choice of database, sensor hardware, and communications 
+        networks shown in blue are outside the scope of this document; implementations are free to choose these 
+        details and use any appropriate technology or codebase.</p>
 
       <p>Each city or public-facing API therein MUST be serialised using the vocabularies described in
         <a href="#individual-systems" class="sectionRef"></a>, with all functionality prescribed.</p>
         
       <p>Integration services such as APIs serving geographies shared by more than one city, MUST in addition offer the 
-        registration functionality described in <a href="#federation" class="sectionRef"></a> and SHOULD implement
-        <a href="#authentication"></a> to prevent misuse of this.</p>
+        predicate registration functionality described in <a href="#federation" class="sectionRef"></a> and MUST implement
+        <a href="#authentication"></a> to prevent misuse of this. This is OPTIONAL for systems that do not provide
+        authority to register predicates from another system.</p>
 
       <div class="illustration">
         <p>
@@ -217,7 +225,7 @@
             <img src="figures/federated-architecture.png" 
              alt="Architecture for an (inter)national network of observatories, linked through shared standards and 
              registration of sensors against shared geographies" />
-            <figcaption>Architecture for an (inter)national network of observatories, linked through shared standards
+            <figcaption>Architecture for an (inter)national network, linked through shared standards
                 and registration of sensors against shared geographies</figcaption>
           </figure>
         </p>
@@ -226,6 +234,7 @@
       <p>It is RECOMMENDED to provide storage of data obtained from sensors in cases where brokerage cannot obtain
         historic observations directly from the device or device's own platform (e.g. where a sensor has its own cloud
         platform).</p>
+      
       <p>Implementations MAY provide direct access to sensor data through a live transformation of data obtained from 
         the sensor or its platform, provided the eventual output is conformant. Implementations MAY provide a mixed 
         approach, where historic data is obtained from a different endpoint to live observations.</p>
@@ -250,12 +259,6 @@
         <p>Should refer to [[!json-ld-syntax]] among others.</p>
       </section>
 
-      <section id="ontologies">
-        <h3>Ontologies</h3>
-
-        <p>Should refer to [[!vocab-ssn]], [[!hydra-core]] and [[!vocab-ssn-ext]] among others.</p>
-      </section>
-
       <section id="vocabularies">
         <h3>Vocabularies</h3>
 
@@ -263,11 +266,155 @@
       </section>
 
       <section id="geospatial">
-          <h3>Spatial features</h3>
-  
-          <p>Most likely some mixture of the [[!geosparql]] ontology and [[!geojson-ld]], because the latter should be 
-            interpreted as valid GeoJSON by GIS clients.</p>
+        <h3>Spatial features</h3>
+
+        <p>Most likely some mixture of the [[!geosparql]] ontology and [[!geojson-ld]], because the latter should be 
+          interpreted as valid GeoJSON by GIS clients.</p>
+      </section>
+
+      <section id="sensing">
+        <h3>Sensing</h3>
+
+        <p>Should refer to [[!vocab-ssn]], [[!hydra-core]] and [[!vocab-ssn-ext]] among others.</p>
+
+        <section id="platforms">
+          <h4>Platforms</h4>
+
+          <p>Detail required here. Platforms are the physical things to which sensors are attached, so mainly a
+            geographical relation.</p>
         </section>
+
+        <section id="sensors">
+          <h4>Sensors</h4>
+
+          <p>Detail required here. Sensors are attached to a platform and produce observations.</p>
+
+          <aside
+              class="example"
+              title="Request and response describing a Sensor with an ObservationCollection for each ObservedProperty"
+            >
+            <pre>
+              GET https://example.com/sensor/a
+              
+              {
+                "@context": {
+                  [...]  // Full context needs to be written
+                },
+                "@type": "sosa:Sensor",
+                [...], // Body needs to be written
+              }
+            </pre>
+          </aside>
+        </section>
+
+        <section id="observations">
+          <h4>Observations</h4>
+
+          <p>Detail required here.</p>
+
+          <div class="issue" data-number="6">
+            <p>Presentation of observations is currently under discussion. Decisions are required on
+              whether each metric should have its own <code>ObservationCollection</code>, whether a request should default
+              to returning 24 hours of observations or a fixed limit, and handling latest observations.
+            </p>
+          </div>
+
+          <aside class="example" title="Request and response describing an ObservationCollection">
+            <pre>
+              GET https://example.com/sensor/a/no2-concentration
+              
+              {
+                "@context": {
+                  [...], // Full context needs to be written
+                  "lastObservation": {
+                    "@id": "sosa:madeObservation",
+                    "@type": ["sosa:Observation", "hydra:last"]
+                  },
+                  "allObservations": {
+                    "@id": "sosa:madeObservation",
+                    "@type": ["@id", "ssn-ext:ObservationCollection"]
+                  }
+                },
+                "@type": "ssn-ext:ObservationCollection",
+                "madeBySensor": "https://example.com/sensor/a",
+                "lastObservation": {
+                  "@id": "https://example.com/sensor/a/no2-concentration/observations/2019-05-31T19:45:00Z",
+                  "resultTime": "2019-05-31T19:45:00Z",
+                  "observedProperty": {
+                    "@id": "https://example.com/property/no2-concentration"
+                  },
+                  "hasResult": {
+                    "@type": ["sosa:Result", "qudt-1-1:QuantityValue"],
+                    "unit": "something:MicrogramsPerCubicMetre", // Need to find vocabulary
+                    "numericValue": "39.9"
+                  }
+                },
+                "allObservations": "https://example.com/sensor/a/no2-concentration/observations"
+              }
+            </pre>
+          </aside>
+
+        </section>
+
+        <section id="results">
+          <h4>Results</h4>
+
+          <p>Detail required here. Results are contained within observations, and are the actual data observed.</p>
+
+          <div class="issue" data-number="5">
+            <p>Presentation of results is currently under discussion. This needs to be informed by use cases, which
+              should cover a wide range of possible data types.</p>
+          </div>
+
+          <p>Detail required here.</p>
+
+          <aside class="example" title="Serialisation of different data types within a result">
+            <p>It is preferred to use a <code>unit</code> that is as descriptive as possible, to assist people in
+              comparing like-for-like data, such as air quality measured in migrograms per cubic metre and averaged
+              over a period of an hour.</p>
+
+            <h5>Numeric</h5>
+            <pre>
+              {
+                "@type": "sosa:Observation",
+                [...],
+                "hasResult": {
+                  "@type": ["sosa:Result", "qudt-1-1:QuantityValue"],
+                  "unit": "qudt-unit-1-1:DegreeCelsius",
+                  "numericValue": "22.4"
+                },
+                "resultTime": "2019-05-29T18:30:00Z"
+              }
+            </pre>
+
+            <h5>String</h5>
+            <pre>
+              {
+                "@type": "sosa:Observation",
+                [...],
+                "hasResult": {
+                  "@type": ["sosa:Result", "xsd:string"],
+                  "@value": "Fishcake"
+                },
+                "resultTime": "2019-05-29T18:30:00Z"
+              }
+            </pre>
+
+            <h5>Image</h5>
+            <pre>
+              {
+                "@type": "sosa:Observation",
+                [...],
+                "hasResult": {
+                  "@type": ["sosa:Result", "schema:image"],
+                  "@id": "https://api.example.com/camera-feeds/GH_A692B1/20190529/183429.jpg"
+                },
+                "resultTime": "2019-05-29T18:30:00Z"
+              }
+            </pre>
+          </aside>
+        </section>
+      </section>
 
       <section id="filtering">
         <h3>Filtering</h3>
