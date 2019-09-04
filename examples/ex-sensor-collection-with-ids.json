@@ -1,0 +1,40 @@
+{
+  "@context": [
+    {
+      "@version": 1.1,
+      "@base": "https://example.webof.uk/"
+    },
+    "/latest/context/sensor-collection.json"
+  ],
+  "@id": "/sensor",
+  "@type": [
+    "Container",
+    "Collection",
+    "SensorCollection"
+  ],
+  "member": [
+    {
+      "@id": "/sensor/sensor-a"
+    },
+    {
+      "@id": "/sensor/sensor-b"
+    },
+    {
+      "@id": "/sensor/sensor-c"
+    },
+    {
+      "@id": "/sensor/sensor-d"
+    },
+    {
+      "@id": "/sensor/sensor-e"
+    }
+  ],
+  "meta": {
+    "@type": "CollectionMeta",
+    "current": {
+      "@type": "woc:CollectionPointer",
+      "offset": 0,
+      "limit": 10
+    }
+  }
+}

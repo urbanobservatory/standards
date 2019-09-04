@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://webof.uk/schema/core/Collection.json",
+
+  "allOf": [
+    { "$ref": "../core/JsonLd.json" }
+  ],
+
+  "properties": {
+    "member": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/id" }
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "prev": {"$ref": "#/definitions/pagination"},
+        "current": {"$ref": "#/definitions/pagination"},
+        "next": {"$ref": "#/definitions/pagination"}
+      },
+      "required": ["current"]
+    }
+  },
+
+  "links": [
+    {
+      "rel": "self",
+      "href": "{?offset,limit}",
+      "templateRequired": ["offset", "limit"],
+      "templatePointers": {
+        "offset": "/meta/current/offset",
+        "limit": "/meta/current/limit"
+      }
+    }, {
+      "rel": "prev",
+      "href": "{?offset,limit}",
+      "templateRequired": ["offset", "limit"],
+      "templatePointers": {
+        "offset": "/meta/prev/offset",
+        "limit": "/meta/prev/limit"
+      }
+    }, {
+      "rel": "next",
+      "href": "{?offset,limit}",
+      "templateRequired": ["offset", "limit"],
+      "templatePointers": {
+        "offset": "/meta/next/offset",
+        "limit": "/meta/next/limit"
+      }
+    }
+  ],
+
+  "definitions": {
+    "id": {
+      "type": "object",
+      "properties": {
+        "@id": { "type": "string", "format": "uri-reference" }
+      },
+      "required": [ "@id" ]
+    },
+    "pagination": {
+      "type": "object",
+      "properties": {
+        "@type": { "type": "string", "pattern": "CollectionPointer$" },
+        "offset": { "type": "integer", "minimum": 0, "default": 0 },
+        "limit": { "type": "integer", "minimum": 1, "default": 10 }
+      }
+    }
+  }
+}

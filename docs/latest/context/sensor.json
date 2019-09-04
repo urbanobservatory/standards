@@ -1,0 +1,26 @@
+{
+  "ssn": "http://www.w3.org/ns/ssn/",
+  "sosa": "http://www.w3.org/ns/sosa/",
+  "ssn-ext": "http://www.w3.org/ns/ssn/ext/",
+
+  "value": "@value",
+
+  "Collection": "woc:Collection",
+  "ObservationTimeseries": "woc:ObservationTimeseries",
+
+  "Platform": "sosa:Platform",
+  "Sensor": "sosa:Sensor",
+  "Observation": "sosa:Observation",
+  "ObservationCollection": "ssn-ext:ObservationCollection",
+  "Result": "sosa:Result",
+
+  "madeObservation": "sosa:madeObservation",
+  "resultTime": "sosa:resultTime",
+  "observes": "sosa:observes",
+  "hasResult": "sosa:hasResult",
+  "isHostedBy": "sosa:isHostedBy",
+  "hosts": "sosa:hosts",
+  "memberOf": {
+    "@reverse": "ssn-ext:hasMember"
+  }
+}

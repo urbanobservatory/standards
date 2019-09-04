@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://webof.uk/schema/ssn/SensorCollection.json",
+
+  "allOf": [
+    { "$ref": "../core/JsonLd.json" },
+    { "$ref": "../core/Collection.json" }
+  ],
+
+  "properties": {
+    "member": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "../core/Concepts.json#/definitions/id"
+          },
+          {
+            "$ref": "Sensor.json#/definitions/sensorProperties"
+          }
+        ]
+      }
+    }
+  }
+}
