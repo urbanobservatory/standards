@@ -54,7 +54,7 @@
   "meta": {
     "@type": "CollectionMeta",
     "current": {
-      "@type": "woc:CollectionPointer",
+      "@type": "CollectionPointer",
       "offset": 0,
       "limit": 10
     }
