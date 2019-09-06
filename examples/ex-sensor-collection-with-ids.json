@@ -6,7 +6,7 @@
     },
     "/latest/context/sensor-collection.json"
   ],
-  "@id": "/sensor",
+  "@id": "sensor",
   "@type": [
     "Container",
     "Collection",
@@ -14,19 +14,19 @@
   ],
   "member": [
     {
-      "@id": "/sensor/sensor-a"
+      "@id": "sensor/sensor-a"
     },
     {
-      "@id": "/sensor/sensor-b"
+      "@id": "sensor/sensor-b"
     },
     {
-      "@id": "/sensor/sensor-c"
+      "@id": "sensor/sensor-c"
     },
     {
-      "@id": "/sensor/sensor-d"
+      "@id": "sensor/sensor-d"
     },
     {
-      "@id": "/sensor/sensor-e"
+      "@id": "sensor/sensor-e"
     }
   ],
   "meta": {

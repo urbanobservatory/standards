@@ -1,22 +1,68 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://localhost/latest/schema/core/Pagination.json",
-
   "title": "Pagination",
   "type": "object",
-
   "properties": {
     "meta": {
       "type": "object",
       "properties": {
         "prev": {
-          "$ref": "#/definitions/pagination"
+          "type": "object",
+          "properties": {
+            "@type": {
+              "type": "string",
+              "pattern": "CollectionPointer$"
+            },
+            "offset": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 10
+            }
+          }
         },
         "current": {
-          "$ref": "#/definitions/pagination"
+          "type": "object",
+          "properties": {
+            "@type": {
+              "type": "string",
+              "pattern": "CollectionPointer$"
+            },
+            "offset": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 10
+            }
+          }
         },
         "next": {
-          "$ref": "#/definitions/pagination"
+          "type": "object",
+          "properties": {
+            "@type": {
+              "type": "string",
+              "pattern": "CollectionPointer$"
+            },
+            "offset": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 10
+            }
+          }
         }
       },
       "required": [
@@ -24,7 +70,6 @@
       ]
     }
   },
-
   "links": [
     {
       "rel": "self",
@@ -63,7 +108,6 @@
       }
     }
   ],
-
   "definitions": {
     "pagination": {
       "type": "object",

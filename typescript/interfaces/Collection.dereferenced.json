@@ -1,0 +1,159 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://localhost/latest/schema/core/Collection.json",
+  "title": "Collection",
+  "allOf": [
+    {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "$id": "http://localhost/latest/schema/core/Pagination.json",
+      "title": "Pagination",
+      "type": "object",
+      "properties": {
+        "meta": {
+          "type": "object",
+          "properties": {
+            "prev": {
+              "type": "object",
+              "properties": {
+                "@type": {
+                  "type": "string",
+                  "pattern": "CollectionPointer$"
+                },
+                "offset": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "default": 0
+                },
+                "limit": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "default": 10
+                }
+              }
+            },
+            "current": {
+              "type": "object",
+              "properties": {
+                "@type": {
+                  "type": "string",
+                  "pattern": "CollectionPointer$"
+                },
+                "offset": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "default": 0
+                },
+                "limit": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "default": 10
+                }
+              }
+            },
+            "next": {
+              "type": "object",
+              "properties": {
+                "@type": {
+                  "type": "string",
+                  "pattern": "CollectionPointer$"
+                },
+                "offset": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "default": 0
+                },
+                "limit": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "default": 10
+                }
+              }
+            }
+          },
+          "required": [
+            "current"
+          ]
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "href": "{?offset,limit}",
+          "templateRequired": [
+            "offset",
+            "limit"
+          ],
+          "templatePointers": {
+            "offset": "/meta/current/offset",
+            "limit": "/meta/current/limit"
+          }
+        },
+        {
+          "rel": "prev",
+          "href": "{?offset,limit}",
+          "templateRequired": [
+            "offset",
+            "limit"
+          ],
+          "templatePointers": {
+            "offset": "/meta/prev/offset",
+            "limit": "/meta/prev/limit"
+          }
+        },
+        {
+          "rel": "next",
+          "href": "{?offset,limit}",
+          "templateRequired": [
+            "offset",
+            "limit"
+          ],
+          "templatePointers": {
+            "offset": "/meta/next/offset",
+            "limit": "/meta/next/limit"
+          }
+        }
+      ],
+      "definitions": {
+        "pagination": {
+          "type": "object",
+          "properties": {
+            "@type": {
+              "type": "string",
+              "pattern": "CollectionPointer$"
+            },
+            "offset": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 10
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "properties": {
+        "member": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri-reference"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

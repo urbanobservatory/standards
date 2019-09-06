@@ -1,9 +1,11 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://webof.uk/schema/ssn/Sensor.json",
+  "$id": "http://localhost/latest/schema/ssn/Sensor.json",
+
+  "title": "Sensor",
+  "type": "object",
 
   "allOf": [
-    { "$ref": "../core/JsonLd.json" },
     { "$ref": "#/definitions/sensorProperties" }
   ],
 
@@ -16,8 +18,18 @@
       "$comment": "Property validation is separated, to allow pointers that validate properties where present, but do not enforce the required properties array",
       "properties": {
         "@type": {
-          "type": "string",
-          "pattern": "^(sosa:)?Sensor$"
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^(sosa:)?Sensor$"
+            }, {
+              "type": "array",
+              "contains": {
+                "type": "string",
+                "pattern": "^(sosa:)?Sensor$"
+              }
+            }
+          ]
         }
       }
     }

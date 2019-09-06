@@ -1,0 +1,39 @@
+{
+  "name": "woc-tests",
+  "version": "0.0.1",
+  "description": "Automated tests for the JSON Schema/HyperSchema used in the Web of Cities",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/urbanobservatory/standards.git"
+  },
+  "keywords": [
+    "json-ld",
+    "json",
+    "schema",
+    "json",
+    "hyperschema",
+    "linked",
+    "data",
+    "sensor",
+    "networks",
+    "urban",
+    "observatory"
+  ],
+  "author": "Luke Smith <luke.smith@ncl.ac.uk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/urbanobservatory/standards/issues"
+  },
+  "homepage": "https://github.com/urbanobservatory/standards#readme",
+  "devDependencies": {
+    "ajv": "^6.10.2",
+    "glob": "^7.1.4",
+    "jest": "^24.9.0",
+    "jsonld": "^1.7.0",
+    "merge-deep": "^3.0.2",
+    "rfdc": "^1.1.4"
+  }
+}

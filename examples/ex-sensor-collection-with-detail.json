@@ -4,9 +4,13 @@
       "@version": 1.1,
       "@base": "https://example.webof.uk/"
     },
-    "/latest/context/sensor-collection.json"
+    "/latest/context/sensor-collection.json",
+    "/latest/context/sensor.json",
+    {
+      "Temperature": "http://w3id.org/saref#Temperature"
+    }
   ],
-  "@id": "/sensor",
+  "@id": "sensor",
   "@type": [
     "Container",
     "Collection",
@@ -14,24 +18,15 @@
   ],
   "member": [
     {
-      "@context": [
-        "/latest/context/sensor.json",
-        {
-          "xsd": "http://www.w3.org/2001/XMLSchema#",
-          "saref": "https://w3id.org/saref#",
-          "float": "xsd:float",
-          "Temperature": "saref:Temperature"
-        }
-      ],
-      "@id": "/sensor/sensor-a",
+      "@id": "sensor/sensor-a",
       "@type": "Sensor",
-      "observes": "/metrics/air-temperature",
-      "isHostedBy": "/platforms/usb-automatic-weather-station",
+      "observes": "metrics/air-temperature",
+      "isHostedBy": "platforms/usb-automatic-weather-station",
       "madeObservation": {
-        "@id": "/sensor/sensor-a/observation/2019-05-31T19:45:00Z",
+        "@id": "sensor/sensor-a/observation/2019-05-31T19:45:00Z",
         "@type": "Observation",
         "memberOf": [{
-          "@id": "/sensor/sensor-a/observation",
+          "@id": "sensor/sensor-a/observation",
           "@type": [
             "@id",
             "Collection",
@@ -40,11 +35,7 @@
           ]
         }],
         "hasResult": {
-          "@type": [
-            "Result",
-            "Temperature",
-            "float"
-          ],
+          "@type": "Temperature",
           "value": 12.0
         },
         "resultTime": "2019-05-31T19:45:00Z"

@@ -1,16 +1,18 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://webof.uk/schema/core/Collection.json",
+  "$id": "http://localhost/latest/schema/core/Collection.json",
+
+  "title": "Collection",
+  "type": "object",
 
   "allOf": [
-    { "$ref": "../core/JsonLd.json" },
-    { "$ref": "../core/Pagination.json" }
+    { "$ref": "./Pagination.json" }
   ],
 
   "properties": {
     "member": {
       "type": "array",
-      "items": { "$ref": "Concepts.json#/definitions/id" }
+      "items": { "$ref": "./Concepts.json#/definitions/id" }
     }
   }
 }

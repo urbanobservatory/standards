@@ -1,17 +1,26 @@
 {
-  "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-  "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-  "woc": "https://urbanobservatory.github.io/standards/vocabulary#",
-  "sosa": "http://www.w3.org/ns/sosa/",
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "woc": "https://urbanobservatory.github.io/standards/vocabulary#",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "hydra": "http://www.w3.org/ns/hydra/core#",
 
-  "Container": "rdfs:Container",
-  "member": "rdfs:member",
-  "meta": "woc:meta",
-  "current": "woc:currentPage",
-  "next": "woc:nextPage",
-  "Collection": "woc:Collection",
-  "CollectionMeta": "woc:CollectionMeta",
-  "CollectionPointer": "woc:CollectionPointer",
-  "SensorCollection": "woc:SensorCollection",
-  "Sensor": "sosa:Sensor"
+    "Container": "rdfs:Container",
+    "member": {
+      "@id": "rdfs:member",
+      "@container": "@list"
+    },
+    "meta": "woc:meta",
+    "current": "woc:currentPage",
+    "next": "woc:nextPage",
+    "Collection": "woc:Collection",
+    "CollectionMeta": "woc:CollectionMeta",
+    "CollectionPointer": "woc:CollectionPointer",
+    "SensorCollection": "woc:SensorCollection",
+    "Sensor": "sosa:Sensor",
+
+    "limit": "hydra:limit",
+    "offset": "hydra:offset"
+  }
 }
