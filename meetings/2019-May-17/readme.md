@@ -7,7 +7,7 @@
  * Car parking availability (Manchester, Newcastle)
  * People counters (Manchester, Newcastle)
  * People movement (Bristol, Newcastle)
- * Vehicle counters from road loops (Manchester, Newcastle)
+ * Vehicle counters from road loops (Manchester, Newcastle, Sheffield)
  * ANPR-based journey times and counts (Manchester, Newcastle)
  * Room metrics (temperature, humidity, etc. over Z-wave) (Bristol)
  * Smart buildings (Bristol, Newcastle, Manchester)
@@ -121,12 +121,15 @@
  * Direct access to the database is discouraged
  * Web-based API approach
  * Main parameters are the start time and end time
+ * Time is stored as seconds from 1970, but more human readable quantities
+can be added to the output
  * Filters can be supplied, default being obtaining all data
- * CSV, NetCDF and JSON as output formats available
+ * Filters include time-related quantities, like month, day-of-the-week
+ * CSV, NetCDF and Geo-JSON as output formats available
  * Ontologies used to describe the columns
  * Data plotting as PDF
  * Aggregation of all of the data into a largest bucket for performance reasons
- * downloads are bundled as ZIP files with individual files for each site and sensor combination
+ * Downloads are bundled as ZIP files with individual files for each site and sensor combination
  * Data requests can include extraction of selected quantities using ontological metadata for its specification
  * Will store mobile sensors in a different database table so the location becomes an additional pair of columns
  * Device and lat/lon are used as a triple column primary key in effect
