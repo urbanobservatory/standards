@@ -1,0 +1,92 @@
+{
+  "@context": {
+    "hydra": "http://www.w3.org/ns/hydra/core#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "vs": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
+    "dc": "http://purl.org/dc/terms/",
+    "cc": "http://creativecommons.org/ns#",
+    "schema": "http://schema.org/",
+
+    "defines": {
+      "@reverse": "rdfs:isDefinedBy"
+    },
+
+    "cc:license": {
+      "@type": "@id"
+    },
+    "cc:attributionURL": {
+      "@type": "@id"
+    },
+
+    "comment": "rdfs:comment",
+    "label": "rdfs:label",
+    "preferredPrefix": "http://purl.org/vocab/vann/preferredNamespacePrefix",
+    "domain": {
+      "@id": "rdfs:domain",
+      "@type": "@vocab"
+    },
+    "range": {
+      "@id": "rdfs:range",
+      "@type": "@vocab"
+    },
+    "subClassOf": {
+      "@id": "rdfs:subClassOf",
+      "@type": "@vocab"
+    },
+    "subPropertyOf": {
+      "@id": "rdfs:subPropertyOf",
+      "@type": "@vocab"
+    },
+    "seeAlso": {
+      "@id": "rdfs:seeAlso",
+      "@type": "@id"
+    },
+    "domainIncludes": {
+      "@id": "schema:domainIncludes",
+      "@type": "@id"
+    },
+    "rangeIncludes": {
+      "@id": "schema:rangeIncludes",
+      "@type": "@id"
+    },
+    "term_status": "vs:term_status",
+    "sameAs": "owl:sameAs"
+  },
+
+  "@id": "https://urbanobservatory.github.io/standards/latest/ns",
+  "@type": "owl:Ontology",
+
+  "label": "The Urban Observatory Core Vocabulary",
+  "comment": "A vocabulary for linked sensor networks and observations",
+  "preferredPrefix": "uo",
+
+  "dc:description": "The Urban Observatory vocabulary provides a consistent means of describing sensors and monitoring networks, and their relationship to infrastructure systems.",
+  "dc:rights": "Copyright © 2020 Newcastle University, University of Birmingham, University of Sheffield, University of Bristol, Cranfield University, University of Manchester",
+  "dc:publisher": "Urban Observatory",
+  "cc:license": "http://creativecommons.org/licenses/by/4.0/",
+  "cc:attributionName": "Urban Observatory",
+  "cc:attributionURL": "https://www.urbanobservatory.ac.uk/",
+
+  "defines": [
+    {
+      "@id": "uo:Collection",
+      "@type": "rdfs:Class",
+      "label": "collection",
+      "comment": "A collection of resources",
+      "term_status": "unstable",
+      "subClassOf": "rdfs:Container"
+    },
+    {
+      "@id": "uo:hasMember",
+      "@type": "rdf:Property",
+      "label": "has member",
+      "comment": "A member of a collection",
+      "term_status": "unstable",
+      "domain": "uo:Collection",
+      "subPropertyOf": "rdf:member"
+    }
+  ]
+}
