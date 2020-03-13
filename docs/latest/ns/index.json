@@ -101,7 +101,7 @@
     },
     {
       "@id": "uo:Meteorology",
-      "@type": "uo:discipline",
+      "@type": "uo:Discipline",
       "label": "Meteorology",
       "comment": "The scientific study of the atmosphere that focuses on weather processes and forecasting.",
       "sameAs": "qudt:discipline:Meteorology",
