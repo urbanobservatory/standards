@@ -96,7 +96,7 @@
       "@id": "Discipline",
       "sameAs": "qudt:discipline",
       "comment": "The fields of expertise to which an observation is relevent.",
-      "domain": "ssn:Observation",
+      "domain": "sosa:Observation",
       "term_status": "unstable"
     },
     {
