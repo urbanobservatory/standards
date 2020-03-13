@@ -9,6 +9,10 @@
     "dc": "http://purl.org/dc/terms/",
     "cc": "http://creativecommons.org/ns#",
     "schema": "http://schema.org/",
+    "qudt": "http://qudt.org/2.1/vocab/",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "ssn": "http://www.w3.org/ns/ssn/",
+    "cf": "http://cfconventions.org/Data/cf-standard-names/47/build/cf-standard-name-table.html#",
 
     "defines": {
       "@reverse": "rdfs:isDefinedBy"
@@ -87,6 +91,35 @@
       "term_status": "unstable",
       "domain": "uo:Collection",
       "subPropertyOf": "rdf:member"
+    },
+    {
+      "@id": "Discipline",
+      "sameAs": "qudt:discipline",
+      "comment": "The fields of expertise to which an observation is relevent.",
+      "domain": "ssn:Observation",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:Meteorology",
+      "@type": "uo:discipline",
+      "label": "Meteorology",
+      "comment": "The scientific study of the atmosphere that focuses on weather processes and forecasting.",
+      "sameAs": "qudt:discipline:Meteorology",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "recommendedUnit",
+      "@type": "rdf:Property",
+      "domain": "sosa:ObservableProperty",
+      "label": "Observations with this observed property are typically provided in this unit of measure. Other units may still be used but the alternative unit MUST be explicitly defined.",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "AirTemperature",
+      "@type": "sosa:ObservableProperty",
+      "recommendedUnit": "qudt:unit:DEG_C",
+      "comment": "Air temperature is the bulk temperature of the air, not the surface (skin) temperature. A dry-bulb temperature.",
+      "sameAs": "cf:air_temperature_tr"
     }
   ]
 }
