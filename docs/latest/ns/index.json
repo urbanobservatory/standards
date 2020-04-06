@@ -57,7 +57,8 @@
       "@type": "@id"
     },
     "term_status": "vs:term_status",
-    "sameAs": "owl:sameAs"
+    "sameAs": "owl:sameAs",
+    "symbol": "qudt:symbol"
   },
 
   "@id": "https://urbanobservatory.github.io/standards/latest/ns",
@@ -66,6 +67,8 @@
   "label": "The Urban Observatory Core Vocabulary",
   "comment": "A vocabulary for linked sensor networks and observations",
   "preferredPrefix": "uo",
+  
+  "recommendedUnits": "uo:recommendUnit",
 
   "dc:description": "The Urban Observatory vocabulary provides a consistent means of describing sensors and monitoring networks, and their relationship to infrastructure systems.",
   "dc:rights": "Copyright © 2020 Newcastle University, University of Birmingham, University of Sheffield, University of Bristol, Cranfield University, University of Manchester",
@@ -93,33 +96,50 @@
       "subPropertyOf": "rdf:member"
     },
     {
-      "@id": "Discipline",
+      "@id": "uo:discipline",
       "sameAs": "qudt:discipline",
       "comment": "The fields of expertise to which an observation is relevent.",
       "domain": "sosa:Observation",
       "term_status": "unstable"
     },
     {
-      "@id": "uo:Meteorology",
-      "@type": "uo:Discipline",
-      "label": "Meteorology",
-      "comment": "The scientific study of the atmosphere that focuses on weather processes and forecasting.",
-      "sameAs": "qudt:discipline:Meteorology",
+      "@id": "uo:unit",
+      "comment": "The unit of measure.",
+      "domain": "sosa:Observation",
+      "sameAs": "qudt:Unit",
       "term_status": "unstable"
     },
     {
-      "@id": "recommendedUnit",
+      "@id": "uo:recommendedUnit",
       "@type": "rdf:Property",
       "domain": "sosa:ObservableProperty",
+      "range": "uo:unit",
       "label": "Observations with this observed property are typically provided in this unit of measure. Other units may still be used but the alternative unit MUST be explicitly defined.",
       "term_status": "unstable"
     },
     {
+      "@id": "Meteorology",
+      "label": "Meteorology",
+      "@type": "uo:Discipline",
+      "comment": "The scientific study of the atmosphere that focuses on weather processes and forecasting.",
+      "sameAs": "qudt:discipline:Meteorology"
+    },
+    {
       "@id": "AirTemperature",
+      "label": "Air Temperature",
       "@type": "sosa:ObservableProperty",
-      "recommendedUnit": "qudt:unit:DEG_C",
+      "recommendedUnits": [
+        "uo:DegreeCelsius"
+      ],
       "comment": "Air temperature is the bulk temperature of the air, not the surface (skin) temperature. A dry-bulb temperature.",
       "sameAs": "cf:air_temperature_tr"
+    },
+    {
+      "@id": "DegreeCelsius",
+      "label": "Degree Celsius",
+      "symbol": "°C",
+      "sameAs": "qudt:DEG_C",
+      "comment": "Celsius, also known as centigrade, is a scale and unit of measurement for temperature. It can refer to a specific temperature on the Celsius scale as well as a unit to indicate a temperature interval, a difference between two temperatures or an uncertainty. This definition fixes the magnitude of both the degree Celsius and the kelvin as precisely 1 part in 273.16 (approximately 0.00366) of the difference between absolute zero and the triple point of water. Thus, it sets the magnitude of one degree Celsius and that of one kelvin as exactly the same. Additionally, it establishes the difference between the two scales' null points as being precisely 273.15°C."
     }
   ]
 }
