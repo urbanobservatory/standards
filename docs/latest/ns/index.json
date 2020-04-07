@@ -68,7 +68,7 @@
   "comment": "A vocabulary for linked sensor networks and observations",
   "preferredPrefix": "uo",
   
-  "recommendedUnits": "uo:recommendUnit",
+  "recommendedUnits": "uo:recommendedUnit",
 
   "dc:description": "The Urban Observatory vocabulary provides a consistent means of describing sensors and monitoring networks, and their relationship to infrastructure systems.",
   "dc:rights": "Copyright © 2020 Newcastle University, University of Birmingham, University of Sheffield, University of Bristol, Cranfield University, University of Manchester",
@@ -96,14 +96,17 @@
       "subPropertyOf": "rdf:member"
     },
     {
-      "@id": "uo:discipline",
-      "sameAs": "qudt:discipline",
+      "@id": "uo:Discipline",
+      "@type": "rdfs:Class",
+      "sameAs": "qudt:Discipline",
       "comment": "The fields of expertise to which an observation is relevent.",
       "domain": "sosa:Observation",
       "term_status": "unstable"
     },
     {
-      "@id": "uo:unit",
+      "@id": "uo:Unit",
+      "@type": "rdfs:Class",
+      "label": "unit",
       "comment": "The unit of measure.",
       "domain": "sosa:Observation",
       "sameAs": "qudt:Unit",
@@ -113,33 +116,44 @@
       "@id": "uo:recommendedUnit",
       "@type": "rdf:Property",
       "domain": "sosa:ObservableProperty",
-      "range": "uo:unit",
-      "label": "Observations with this observed property are typically provided in this unit of measure. Other units may still be used but the alternative unit MUST be explicitly defined.",
+      "range": "uo:Unit",
+      "label": "recommended unit",
+      "comment": "Observations with this observed property are typically provided in this unit of measure. Other units may still be used but the alternative unit MUST be explicitly defined.",
       "term_status": "unstable"
     },
     {
       "@id": "Meteorology",
-      "label": "Meteorology",
+      "label": "meteorology",
       "@type": "uo:Discipline",
       "comment": "The scientific study of the atmosphere that focuses on weather processes and forecasting.",
-      "sameAs": "qudt:discipline:Meteorology"
+      "sameAs": [
+        "qudt:discipline:Meteorology"
+      ],
+      "term_status": "unstable"
     },
     {
       "@id": "AirTemperature",
-      "label": "Air Temperature",
+      "label": "air temperature",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
         "uo:DegreeCelsius"
       ],
       "comment": "Air temperature is the bulk temperature of the air, not the surface (skin) temperature. A dry-bulb temperature.",
-      "sameAs": "cf:air_temperature_tr"
+      "sameAs": [
+        "cf:air_temperature_tr"
+      ],
+      "term_status": "unstable"
     },
     {
       "@id": "DegreeCelsius",
-      "label": "Degree Celsius",
+      "@type": "uo:Unit",
+      "label": "degree celsius",
       "symbol": "°C",
-      "sameAs": "qudt:DEG_C",
-      "comment": "Celsius, also known as centigrade, is a scale and unit of measurement for temperature. It can refer to a specific temperature on the Celsius scale as well as a unit to indicate a temperature interval, a difference between two temperatures or an uncertainty. This definition fixes the magnitude of both the degree Celsius and the kelvin as precisely 1 part in 273.16 (approximately 0.00366) of the difference between absolute zero and the triple point of water. Thus, it sets the magnitude of one degree Celsius and that of one kelvin as exactly the same. Additionally, it establishes the difference between the two scales' null points as being precisely 273.15°C."
+      "comment": "Celsius, also known as centigrade, is a scale and unit of measurement for temperature. It can refer to a specific temperature on the Celsius scale as well as a unit to indicate a temperature interval, a difference between two temperatures or an uncertainty. This definition fixes the magnitude of both the degree Celsius and the kelvin as precisely 1 part in 273.16 (approximately 0.00366) of the difference between absolute zero and the triple point of water. Thus, it sets the magnitude of one degree Celsius and that of one kelvin as exactly the same. Additionally, it establishes the difference between the two scales' null points as being precisely 273.15°C.",
+      "sameAs": [
+        "qudt:DEG_C"
+      ],
+      "term_status": "unstable"
     }
   ]
 }
