@@ -122,7 +122,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "Meteorology",
+      "@id": "uo:Meteorology",
       "label": "meteorology",
       "@type": "uo:Discipline",
       "comment": "The scientific study of the atmosphere that focuses on weather processes and forecasting.",
@@ -132,7 +132,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "AirTemperature",
+      "@id": "uo:AirTemperature",
       "label": "air temperature",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
@@ -145,7 +145,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "DegreeCelsius",
+      "@id": "uo:DegreeCelsius",
       "@type": "uo:Unit",
       "label": "degree celsius",
       "symbol": "°C",
