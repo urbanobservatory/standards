@@ -126,7 +126,7 @@
     },
 
     {
-      "@id": "uo:meteorology",
+      "@id": "uo:Meteorology",
       "label": "meteorology",
       "@type": "uo:Discipline",
       "comment": "The scientific study of the atmosphere that focuses on weather processes and forecasting.",
