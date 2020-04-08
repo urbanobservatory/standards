@@ -9,7 +9,10 @@
     "dc": "http://purl.org/dc/terms/",
     "cc": "http://creativecommons.org/ns#",
     "schema": "http://schema.org/",
-    "qudt": "http://qudt.org/2.1/vocab/",
+    "qudt": "http://www.qudt.org/2.1/schema/qudt",
+    "qudtUnit": "http://qudt.org/vocab/unit/",
+    "qudtQuantityKind": "http://qudt.org/vocab/quantityKind/",
+    "qudtDiscipline": "http://qudt.org/2.1/vocab/discipline#",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn": "http://www.w3.org/ns/ssn/",
     "cf": "http://cfconventions.org/Data/cf-standard-names/47/build/cf-standard-name-table.html#",
@@ -128,7 +131,7 @@
       "@type": "uo:Discipline",
       "comment": "The scientific study of the atmosphere that focuses on weather processes and forecasting.",
       "sameAs": [
-        "qudt:discipline:Meteorology"
+        "qudtDiscipline:Meteorology"
       ],
       "term_status": "unstable"
     },
@@ -138,7 +141,7 @@
       "@type": "uo:Discipline",
       "comment": "Looks at the composition of planetary atmospheres and the reactions and interactions that drive these dynamic and diverse systems",
       "sameAs": [
-        "qudt:discipline:AtmosphericChemistry"
+        "qudtDiscipline:AtmosphericChemistry"
       ],
       "term_status": "unstable"
     },
@@ -162,7 +165,7 @@
       "@type": "uo:Discipline",
       "comment": "Relates to the production and supply of energy (electricity, gas, oil, etc) to households, businesses, industry and so on.",
       "sameAs": [
-        "qudt:discipline:Energy"
+        "qudtDiscipline:Energy"
       ],
       "term_status": "unstable"
     },
@@ -203,7 +206,7 @@
       ],
       "comment": "Relative humidity (RH) is the ratio of the partial pressure of water vapor to the equilibrium vapor pressure of water at a given temperature. Relative humidity depends on temperature and the pressure of the system of interest.",
       "sameAs": [
-        "qudt:quantityKind:RelativeHumidity", 
+        "qudtQuantityKind:RelativeHumidity", 
         "cf:relative_humidity"
       ],
       "term_status": "unstable"
@@ -331,7 +334,7 @@
       "symbol": "°C",
       "comment": "Celsius, also known as centigrade, is a scale and unit of measurement for temperature. It can refer to a specific temperature on the Celsius scale as well as a unit to indicate a temperature interval, a difference between two temperatures or an uncertainty. This definition fixes the magnitude of both the degree Celsius and the kelvin as precisely 1 part in 273.16 (approximately 0.00366) of the difference between absolute zero and the triple point of water. Thus, it sets the magnitude of one degree Celsius and that of one kelvin as exactly the same. Additionally, it establishes the difference between the two scales' null points as being precisely 273.15°C.",
       "sameAs": [
-        "qudt:unit:DEG_C"
+        "qudtUnit:DEG_C"
       ],
       "term_status": "unstable"
     },
@@ -342,7 +345,7 @@
       "symbol": "%",
       "comment": "'Percent' is a unit for 'Dimensionless Ratio' expressed as %.",
       "sameAs": [
-        "qudt:unit:PERCENT"
+        "qudtUnit:PERCENT"
       ],
       "term_status": "unstable"
     },
@@ -353,7 +356,7 @@
       "symbol": "hPa",
       "comment": "Hectopascal is a unit of pressure. 1 Pa is approximately the pressure exerted by a 10 g mass resting on a 1 cm squared area. 1013 hPa = 1 atm. There are 100 pascals in 1 hectopascal.",
       "sameAs": [
-        "qudt:unit:HectoPA"
+        "qudtUnit:HectoPA"
       ],
       "term_status": "unstable"
     },
@@ -364,7 +367,7 @@
       "symbol": "m/s",
       "comment": "Metre per second is an SI derived unit of both speed (scalar) and velocity (vector quantity which specifies both magnitude and a specific direction), defined by distance in metres divided by time in seconds.",
       "sameAs": [
-        "qudt:unit:M-PER-SEC"
+        "qudtUnit:M-PER-SEC"
       ],
       "term_status": "unstable"
     },
@@ -375,7 +378,7 @@
       "symbol": "°",
       "comment": "A degree (in full, a degree of arc, arc degree, or arcdegree), usually denoted by ∘ (the degree symbol), is a measurement of plane angle, representing 1/360 of a full rotation; one degree is equivalent to 2π/360rad, 0.017453rad. It is not an SI unit, as the SI unit for angles is radian, but is an accepted SI unit.",
       "sameAs": [
-        "qudt:unit:DEG"
+        "qudtUnit:DEG"
       ],
       "term_status": "unstable"
     },
@@ -386,7 +389,7 @@
       "symbol": "mm",
       "comment": "Unit of distance. Equal to one thousandth of a metre, which is the SI base unit of length.",
       "sameAs": [
-        "qudt:unit:MilliM"
+        "qudtUnit:MilliM"
       ],
       "term_status": "unstable"
     },
@@ -405,7 +408,7 @@
       "symbol": "km/h",
       "comment": "Kilometer per Hour is a C.G.S System unit for 'Linear Velocity'.",
       "sameAs": [
-        "qudt:unit:KiloM-PER-HR"
+        "qudtUnit:KiloM-PER-HR"
       ],
       "term_status": "unstable"
     },
@@ -416,7 +419,7 @@
       "symbol": "W/m²",
       "comment": "A unit of irradiance defined as the power received per area. This is a unit in the category of Energy flux. It is also known as watts per square meter, watt per square metre, watts per square metre, watt/square meter, watt/square metre. This unit is commonly used in the SI unit system. This unit is the standard SI unit in this category.",
       "sameAs": [
-        "qudt:unit:W-PER-M2"
+        "qudtUnit:W-PER-M2"
       ],
       "term_status": "unstable"
     },
@@ -427,7 +430,7 @@
       "symbol": "ppm",
       "comment": "Dimensionless unit for concentration.",
       "sameAs": [
-        "qudt:unit:PPM"
+        "qudtUnit:PPM"
       ],
       "term_status": "unstable"
     },
@@ -438,7 +441,7 @@
       "symbol": "ppb",
       "comment": "Dimensionless unit for concentration.",
       "sameAs": [
-        "qudt:unit:PPB"
+        "qudtUnit:PPB"
       ],
       "term_status": "unstable"
     },
@@ -457,7 +460,7 @@
       "symbol": "db",
       "comment": "A customary logarithmic measure most commonly used (in various ways) for measuring sound.The beginning of the scale, 0 decibels, can be set in different ways, depending on exactly the aspect of sound being measured. For sound intensity (the power of the sound waves per unit of area) 0 decibel is equal to 1 picowatts per metre squared. This corresponds approximately to the faintest sound that can be detected by a person who has good hearing. For sound pressure (the pressure exerted by the sound waves) 0 decibels equals 20 micropascals RMS, and for sound power 0 decibels sometimes equals 1 picowatt. In all cases, one decibel equals ≈ 0.115129 neper.",
       "sameAs": [
-        "qudt:unit:DeciB"
+        "qudtUnit:DeciB"
       ],
       "term_status": "unstable"
     },
@@ -468,7 +471,7 @@
       "symbol": "V",
       "comment": "Volt is the SI unit of electric potential. Electric potential is defined as the amount of potential energy present per unit of charge. Electric potential is measured in volts, with one volt representing a potential of one joule per coulomb of charge. The volt also may be expressed with a variety of other units. For example, a volt is also equal to one watt per ampere (W/A) and one joule per ampere per second (J/A/s).",
       "sameAs": [
-        "qudt:unit:V"
+        "qudtUnit:V"
       ],
       "term_status": "unstable"
     }
