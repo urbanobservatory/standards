@@ -326,7 +326,106 @@
       "comment": "The percentage of battery remaining.",
       "term_status": "unstable"
     },
-
+    {
+      "@id": "uo:LAeq",
+      "label": "A-weighted, equivalent continuous sound level",
+      "@type": "sosa:ObservableProperty",
+      "recommendedUnits": [
+        "uo:Decibel"
+      ],
+      "comment": "A-weighted equivalent continuous sound level in decibels measured over a stated period of time",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:LAFmax,
+      "label": "A-weighted, fast time-constant, maximum, sound level",
+      "@type": "sosa:ObservableProperty",
+      "recommendedUnits": [
+        "uo:Decibel"
+      ],
+      "comment": "A-weighted, fast time-constant, maximum, sound level",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:LA10,
+      "label": "A-weighted, sound level just exceeded for 10% of the measurement period",
+      "@type": "sosa:ObservableProperty",
+      "recommendedUnits": [
+        "uo:Decibel"
+      ],
+      "comment": "Extensively used for rating traffic noise",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:LA50,
+      "label": "A-weighted, sound level just exceeded for 50% of the measurement period",
+      "@type": "sosa:ObservableProperty",
+      "recommendedUnits": [
+        "uo:Decibel"
+      ],
+      "comment": "A-weighted, sound level just exceeded for 50% of the measurement period",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:LA90,
+      "label": "A-weighted, sound level just exceeded for 90% of the measurement period",
+      "@type": "sosa:ObservableProperty",
+      "recommendedUnits": [
+        "uo:Decibel"
+      ],
+      "comment": "Extensively used for rating background noise",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:LCeq,
+      "label": "C-weighted, equivalent continuous sound level",
+      "@type": "sosa:ObservableProperty",
+      "recommendedUnits": [
+        "uo:Decibel"
+      ],
+      "comment": "C-weighted equivalent continuous sound level in decibels measured over a stated period of time",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:LCFmax,
+      "label": "C-weighted, fast time-constant, maximum, sound level",
+      "@type": "sosa:ObservableProperty",
+      "recommendedUnits": [
+        "uo:Decibel"
+      ],
+      "comment": "C-weighted, fast time-constant, maximum, sound level",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:LC10,
+      "label": "C-weighted, sound level just exceeded for 10% of the measurement period",
+      "@type": "sosa:ObservableProperty",
+      "recommendedUnits": [
+        "uo:Decibel"
+      ],
+      "comment": "C-weighted, sound level just exceeded for 10% of the measurement period",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:LC50,
+      "label": "C-weighted, sound level just exceeded for 50% of the measurement period",
+      "@type": "sosa:ObservableProperty",
+      "recommendedUnits": [
+        "uo:Decibel"
+      ],
+      "comment": "C-weighted, sound level just exceeded for 50% of the measurement period",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:LC90,
+      "label": "C-weighted, sound level just exceeded for 90% of the measurement period",
+      "@type": "sosa:ObservableProperty",
+      "recommendedUnits": [
+        "uo:Decibel"
+      ],
+      "comment": "C-weighted, sound level just exceeded for 90% of the measurement period",
+      "term_status": "unstable"
+    },
     {
       "@id": "uo:DegreeCelsius",
       "@type": "uo:Unit",
