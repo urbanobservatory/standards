@@ -337,7 +337,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:LAFmax,
+      "@id": "uo:LAFmax",
       "label": "A-weighted, fast time-constant, maximum, sound level",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
@@ -347,7 +347,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:LA10,
+      "@id": "uo:LA10",
       "label": "A-weighted, sound level just exceeded for 10% of the measurement period",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
@@ -357,7 +357,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:LA50,
+      "@id": "uo:LA50",
       "label": "A-weighted, sound level just exceeded for 50% of the measurement period",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
@@ -367,7 +367,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:LA90,
+      "@id": "uo:LA90",
       "label": "A-weighted, sound level just exceeded for 90% of the measurement period",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
@@ -377,7 +377,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:LCeq,
+      "@id": "uo:LCeq",
       "label": "C-weighted, equivalent continuous sound level",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
@@ -387,7 +387,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:LCFmax,
+      "@id": "uo:LCFmax",
       "label": "C-weighted, fast time-constant, maximum, sound level",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
@@ -397,7 +397,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:LC10,
+      "@id": "uo:LC10",
       "label": "C-weighted, sound level just exceeded for 10% of the measurement period",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
@@ -407,7 +407,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:LC50,
+      "@id": "uo:LC50",
       "label": "C-weighted, sound level just exceeded for 50% of the measurement period",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
@@ -417,7 +417,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:LC90,
+      "@id": "uo:LC90",
       "label": "C-weighted, sound level just exceeded for 90% of the measurement period",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
