@@ -196,7 +196,8 @@
       "label": "air temperature",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:DegreeCelsius"
+        "uo:DegreeCelsius",
+        "uo:Kelvin"
       ],
       "comment": "Air temperature is the bulk temperature of the air, not the surface (skin) temperature. A dry-bulb temperature.",
       "sameAs": [
@@ -225,7 +226,7 @@
       "recommendedUnits": [
         "uo:Hectopascal"
       ],
-      "comment": "Air pressure is the force per unit area which would be exerted when the moving gas molecules of which the air is composed strike a theoretical surface of any orientation.",
+      "comment": "Air pressure is the force per unit area which would be exerted when the moving gas molecules of which the air is composed strike a theoretical surface of any orientation. The is the pressure recorded at the elevation/altitude of the pressure sensor and has NOT been corrected to mean sea level.",
       "sameAs": [
         "cf:air_pressure"
       ],
@@ -441,6 +442,17 @@
       "comment": "Celsius, also known as centigrade, is a scale and unit of measurement for temperature. It can refer to a specific temperature on the Celsius scale as well as a unit to indicate a temperature interval, a difference between two temperatures or an uncertainty. This definition fixes the magnitude of both the degree Celsius and the kelvin as precisely 1 part in 273.16 (approximately 0.00366) of the difference between absolute zero and the triple point of water. Thus, it sets the magnitude of one degree Celsius and that of one kelvin as exactly the same. Additionally, it establishes the difference between the two scales' null points as being precisely 273.15°C.",
       "sameAs": [
         "qudtUnit:DEG_C"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:Kelvin",
+      "@type": "uo:Unit",
+      "label": "kelvin",
+      "symbol": "K",
+      "comment": "The SI base unit of temperature, previously called the degree Kelvin. One kelvin represents the same temperature difference as one degree Celsius. In 1967 the General Conference on Weights and Measures defined the temperature of the triple point of water (the temperature at which water exists simultaneously in the gaseous, liquid, and solid states) to be exactly 273.16 kelvins. Since this temperature is also equal to 0.01 u00b0C, the temperature in kelvins is always equal to 273.15 plus the temperature in degrees Celsius. The kelvin equals exactly 1.8 degrees Fahrenheit. The unit is named for the British mathematician and physicist William Thomson (1824-1907), later known as Lord Kelvin after he was named Baron Kelvin of Largs.",
+      "sameAs": [
+        "qudtUnit:K"
       ],
       "term_status": "unstable"
     },
