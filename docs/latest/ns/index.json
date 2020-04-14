@@ -183,6 +183,13 @@
       "comment": "The movement of humans, animals and goods from one location to another.",
       "term_status": "unstable"
     },
+    {
+      "@id": "uo:EnvironmentalAcoustics",
+      "label": "environmental acoustics",
+      "@type": "uo:Discipline",
+      "comment": "The domain of science and techniques related to the study of acoustic vibrations and concerning their production, propagation and effects in relation to the preservation of environment.",
+      "term_status": "unstable"
+    },
 
     {
       "@id": "uo:AirTemperature",
