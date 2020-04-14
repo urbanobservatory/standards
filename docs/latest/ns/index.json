@@ -226,7 +226,7 @@
       "recommendedUnits": [
         "uo:Hectopascal"
       ],
-      "comment": "Air pressure is the force per unit area which would be exerted when the moving gas molecules of which the air is composed strike a theoretical surface of any orientation. The is the pressure recorded at the elevation/altitude of the pressure sensor and has NOT been corrected to mean sea level.",
+      "comment": "Air pressure is the force per unit area which would be exerted when the moving gas molecules of which the air is composed strike a theoretical surface of any orientation. This is the pressure recorded at the elevation and altitude of the pressure sensor and has NOT been corrected to mean sea level.",
       "sameAs": [
         "cf:air_pressure"
       ],
