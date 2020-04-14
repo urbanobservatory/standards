@@ -426,12 +426,12 @@
     },
     {
       "@id": "uo:LC90",
-      "label": "C-weighted, sound level exceeded for 90% of the measurement period. C-weighting is a filter applied to the sound pressure level in order to describe the response of the human ear to high noise levels. C-weighted measurements are commonly used to assess the effect of impulse noises on the human ear.",
+      "label": "C-weighted, sound level exceeded for 90% of the measurement period",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
         "uo:Decibel"
       ],
-      "comment": "C-weighted, sound level exceeded for 90% of the measurement period",
+      "comment": "C-weighted, sound level exceeded for 90% of the measurement period. C-weighting is a filter applied to the sound pressure level in order to describe the response of the human ear to high noise levels. C-weighted measurements are commonly used to assess the effect of impulse noises on the human ear.",
       "term_status": "unstable"
     },
     {
