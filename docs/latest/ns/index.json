@@ -333,7 +333,7 @@
       "recommendedUnits": [
         "uo:Decibel"
       ],
-      "comment": "A-weighted equivalent continuous sound level in decibels measured over a stated period of time",
+      "comment": "A-weighted equivalent continuous sound level in decibels measured over a stated period of time. A-weighting is a filter applied to the sound pressure level in an effort to account for the relative loudness perceived by the human ear, which is less sensitive to low audio frequencies. This means that A-weighted measurements correlate well with the perceived loudness at low sound levels.",
       "term_status": "unstable"
     },
     {
@@ -343,37 +343,37 @@
       "recommendedUnits": [
         "uo:Decibel"
       ],
-      "comment": "A-weighted, fast time-constant, maximum, sound level",
+      "comment": "The maximum noise level with A-weighted frequency response and Fast time constant. A-weighting is a filter applied to the sound pressure level in an effort to account for the relative loudness perceived by the human ear, which is less sensitive to low audio frequencies. This means that A-weighted measurements correlate well with the perceived loudness at low sound levels. 'Fast time constant' means that only audio signals with a rise and decay time of up to 125 ms are considered.",
       "term_status": "unstable"
     },
     {
       "@id": "uo:LA10",
-      "label": "A-weighted, sound level just exceeded for 10% of the measurement period",
+      "label": "A-weighted, sound level exceeded for 10% of the measurement period",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
         "uo:Decibel"
       ],
-      "comment": "Extensively used for rating traffic noise",
+      "comment": "A-weighted, sound level exceeded for 10% of the measurement period. A-weighting is a filter applied to the sound pressure level in an effort to account for the relative loudness perceived by the human ear, which is less sensitive to low audio frequencies. This means that A-weighted measurements correlate well with the perceived loudness at low sound levels. LA10 is extensively used for rating traffic noise",
       "term_status": "unstable"
     },
     {
       "@id": "uo:LA50",
-      "label": "A-weighted, sound level just exceeded for 50% of the measurement period",
+      "label": "A-weighted, sound level exceeded for 50% of the measurement period",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
         "uo:Decibel"
       ],
-      "comment": "A-weighted, sound level just exceeded for 50% of the measurement period",
+      "comment": "A-weighted, sound level exceeded for 50% of the measurement period. A-weighting is a filter applied to the sound pressure level in an effort to account for the relative loudness perceived by the human ear, which is less sensitive to low audio frequencies. This means that A-weighted measurements correlate well with the perceived loudness at low sound levels.",
       "term_status": "unstable"
     },
     {
       "@id": "uo:LA90",
-      "label": "A-weighted, sound level just exceeded for 90% of the measurement period",
+      "label": "A-weighted, sound level exceeded for 90% of the measurement period",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
         "uo:Decibel"
       ],
-      "comment": "Extensively used for rating background noise",
+      "comment": "A-weighted, sound level exceeded for 90% of the measurement period. A-weighting is a filter applied to the sound pressure level in an effort to account for the relative loudness perceived by the human ear, which is less sensitive to low audio frequencies. This means that A-weighted measurements correlate well with the perceived loudness at low sound levels. LA90 is extensively used for rating background noise",
       "term_status": "unstable"
     },
     {
@@ -383,7 +383,7 @@
       "recommendedUnits": [
         "uo:Decibel"
       ],
-      "comment": "C-weighted equivalent continuous sound level in decibels measured over a stated period of time",
+      "comment": "C-weighted equivalent continuous sound level in decibels measured over a stated period of time. C-weighting is a filter applied to the sound pressure level in order to describe the response of the human ear to high noise levels. C-weighted measurements are commonly used to assess the effect of impulse noises on the human ear.",
       "term_status": "unstable"
     },
     {
@@ -393,37 +393,37 @@
       "recommendedUnits": [
         "uo:Decibel"
       ],
-      "comment": "C-weighted, fast time-constant, maximum, sound level",
+      "comment": "The maximum noise level with C-weighted frequency response and Fast time constant. C-weighted equivalent continuous sound level in decibels measured over a stated period of time. C-weighting is a filter applied to the sound pressure level in order to describe the response of the human ear to high noise levels. C-weighted measurements are commonly used to assess the effect of impulse noises on the human ear. 'Fast time constant' means that only audio signals with a rise and decay time of up to 125 ms are considered.",
       "term_status": "unstable"
     },
     {
       "@id": "uo:LC10",
-      "label": "C-weighted, sound level just exceeded for 10% of the measurement period",
+      "label": "C-weighted, sound level exceeded for 10% of the measurement period",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
         "uo:Decibel"
       ],
-      "comment": "C-weighted, sound level just exceeded for 10% of the measurement period",
+      "comment": "C-weighted, sound level exceeded for 10% of the measurement period. C-weighting is a filter applied to the sound pressure level in order to describe the response of the human ear to high noise levels. C-weighted measurements are commonly used to assess the effect of impulse noises on the human ear.",
       "term_status": "unstable"
     },
     {
       "@id": "uo:LC50",
-      "label": "C-weighted, sound level just exceeded for 50% of the measurement period",
+      "label": "C-weighted, sound level exceeded for 50% of the measurement period",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
         "uo:Decibel"
       ],
-      "comment": "C-weighted, sound level just exceeded for 50% of the measurement period",
+      "comment": "C-weighted, sound level exceeded for 50% of the measurement period. C-weighting is a filter applied to the sound pressure level in order to describe the response of the human ear to high noise levels. C-weighted measurements are commonly used to assess the effect of impulse noises on the human ear.",
       "term_status": "unstable"
     },
     {
       "@id": "uo:LC90",
-      "label": "C-weighted, sound level just exceeded for 90% of the measurement period",
+      "label": "C-weighted, sound level exceeded for 90% of the measurement period. C-weighting is a filter applied to the sound pressure level in order to describe the response of the human ear to high noise levels. C-weighted measurements are commonly used to assess the effect of impulse noises on the human ear.",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
         "uo:Decibel"
       ],
-      "comment": "C-weighted, sound level just exceeded for 90% of the measurement period",
+      "comment": "C-weighted, sound level exceeded for 90% of the measurement period",
       "term_status": "unstable"
     },
     {
