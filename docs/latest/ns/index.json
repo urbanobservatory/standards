@@ -315,6 +315,49 @@
       "term_status": "unstable"
     },
     {
+      "@id": "uo:SolarRadiation",
+      "label": "solar radiation",
+      "@type": "sosa:ObservableProperty",
+      "recommendedUnits": [
+        "uo:WattPerSquareMetre"
+      ],
+      "comment": "Solar radiation is the power per unit area received from the Sun in the form of electromagnetic radiation as reported in the wavelength range of the measuring instrument. A measure of the total incoming (direct and diffuse) solar radiation. Typically measured with a pyranometer.",
+      "sameAs": [
+        "cf:solar_irradiance"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:LightningCount",
+      "label": "lightning count",
+      "@type": "sosa:ObservableProperty",
+      "recommendedUnits": [
+        "uo:Count"
+      ],
+      "comment": "The number of lightning counts detected over a time period. Observations of lighting counts MUST include a phenomenonTime object detailing the start and end of this time period.",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:LightningDistance",
+      "label": "lightning distance",
+      "@type": "sosa:ObservableProperty",
+      "recommendedUnits": [
+        "uo:Kilometre"
+      ],
+      "comment": "The distance from the sensor to the observed lightning strike.",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:VapourPressure",
+      "label": "vapour pressure",
+      "@type": "sosa:ObservableProperty",
+      "recommendedUnits": [
+        "uo:Kilopascal"
+      ],
+      "comment": "The pressure exerted by a vapor in thermodynamic equilibrium with its condensed phases (solid or liquid) at a given temperature in a closed system.",
+      "term_status": "unstable"
+    },
+    {
       "@id": "uo:BatteryVoltage",
       "label": "battery voltage",
       "@type": "sosa:ObservableProperty",
@@ -527,6 +570,38 @@
       "comment": "Kilometer per Hour is a C.G.S System unit for 'Linear Velocity'.",
       "sameAs": [
         "qudtUnit:KiloM-PER-HR"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:Kilometre",
+      "@type": "uo:Unit",
+      "label": "kilometre",
+      "symbol": "km",
+      "comment": "A common metric unit of length or distance. One kilometer equals exactly 1000 meters, about 0.621 371 19 mile, 1093.6133 yards, or 3280.8399 feet. Oddly, higher multiples of the meter are rarely used; even the distances to the farthest galaxies are usually measured in kilometers.",
+      "sameAs": [
+        "qudtUnit:KiloM"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:Kilopascal",
+      "@type": "uo:Unit",
+      "label": "kilopascal",
+      "symbol": "kPa",
+      "comment": "Kilopascal is a unit of pressure. 1 kPa is approximately the pressure exerted by a 10-g mass resting on a 1-cm2 area. 101.3 kPa = 1 atm. There are 1,000 pascals in 1 kilopascal.",
+      "sameAs": [
+        "qudtUnit:KiloPA"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:Count",
+      "@type": "uo:Unit",
+      "label": "count",
+      "comment": "A dimensionless number indicating a count of something.",
+      "sameAs": [
+        "qudtUnit:NUM"
       ],
       "term_status": "unstable"
     },
