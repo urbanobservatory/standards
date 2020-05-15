@@ -206,13 +206,46 @@
       "term_status": "unstable"
     },
     {
+      "@id": "uo:DewPointAirTemperature",
+      "label": "dew point air temperature",
+      "@type": "sosa:ObservableProperty",
+      "recommendedUnits": [
+        "uo:DegreeCelsius"
+      ],
+      "comment": "Dew point air temperature is the temperature at which a parcel of air reaches saturation upon being cooled at constant pressure and specific humidity.",
+      "sameAs": [
+        "cf:dew_point_temperature"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:GrassSurfaceTemperature",
+      "label": "grass surface temperature",
+      "@type": "sosa:ObservableProperty",
+      "recommendedUnits": [
+        "uo:DegreeCelsius"
+      ],
+      "comment": "Temperature of a grass covered surface. This observed property is commonly recorded at meterological observing sites.",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:ConcreteSurfaceTemperature",
+      "label": "concrete surface temperature",
+      "@type": "sosa:ObservableProperty",
+      "recommendedUnits": [
+        "uo:DegreeCelsius"
+      ],
+      "comment": "Temperature of a concrete surface. This observed property is commonly recorded at meterological observing sites.",
+      "term_status": "unstable"
+    },
+    {
       "@id": "uo:RelativeHumidity",
       "label": "relative humidity",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
         "uo:Percent"
       ],
-      "comment": "Relative humidity (RH) is the ratio of the partial pressure of water vapor to the equilibrium vapor pressure of water at a given temperature. Relative humidity depends on temperature and the pressure of the system of interest.",
+      "comment": "Relative humidity (RH) is the ratio of the partial pressure of water vapour to the equilibrium vapour pressure of water at a given temperature. Relative humidity depends on temperature and the pressure of the system of interest.",
       "sameAs": [
         "qudtQuantityKind:RelativeHumidity", 
         "cf:relative_humidity"
@@ -352,9 +385,10 @@
       "label": "vapour pressure",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:Kilopascal"
+        "uo:Kilopascal",
+        "uo:Hectopascal"
       ],
-      "comment": "The pressure exerted by a vapor in thermodynamic equilibrium with its condensed phases (solid or liquid) at a given temperature in a closed system.",
+      "comment": "The pressure exerted by a vapour in thermodynamic equilibrium with its condensed phases (solid or liquid) at a given temperature in a closed system.",
       "term_status": "unstable"
     },
     {
