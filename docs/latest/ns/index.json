@@ -239,6 +239,16 @@
       "term_status": "unstable"
     },
     {
+      "@id": "uo:SoilTemperature",
+      "label": "soil temperature",
+      "@type": "sosa:ObservableProperty",
+      "recommendedUnits": [
+        "uo:DegreeCelsius"
+      ],
+      "comment": "Temperature of the soil. This observed property is commonly recorded at meterological observing sites, typically at multiple depths.",
+      "term_status": "unstable"
+    },
+    {
       "@id": "uo:RelativeHumidity",
       "label": "relative humidity",
       "@type": "sosa:ObservableProperty",
