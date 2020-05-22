@@ -39,3 +39,14 @@ In addition, a term definition *MAY* include:
 | [subPropertyOf](https://www.w3.org/TR/rdf-schema/#ch_subpropertyof) | <p>All instances of this property are also instances of another property.</p> |
 | [seeAlso](https://www.w3.org/TR/rdf-schema/#ch_seealso) | <p>A reference that provides additional information. This does not have to be machine readable, and could for example be a Wikipedia entry or similar.</p> |
 | [sameAs](https://www.w3.org/TR/owl-ref/#sameAs-def) | <p>An indication that a resource is referring to exactly the same thing. This is most appropriate for physical things (e.g. a room in a building that exists in two different APIs may be linked this way) rather than conceptual relationships, which may be better described as a sub-class or sub-property.</p> |
+
+
+## Naming conventions
+
+The following table describes which *case* MUST be used when adding new definitions of a certain type. Note the use of compact IRIs, e.g. using the prefix `uo:`. 
+
+Definition Type | Case | Examples
+--- | --- | ---
+Class | PascalCase | `uo:Discipline`, `uo:ObservableProperty`, `uo:Collection`
+Property | camelCase | `uo:recommendedUnit`, `uo:hasMember`
+Instances | kebab-case | `uo:atmospheric-chemistry`, `uo:air-temperature`, `uo:millimetre`, `uo:earth-atmosphere`

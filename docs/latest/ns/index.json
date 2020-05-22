@@ -126,7 +126,7 @@
     },
 
     {
-      "@id": "uo:Meteorology",
+      "@id": "uo:meteorology",
       "label": "meteorology",
       "@type": "uo:Discipline",
       "comment": "The scientific study of the atmosphere that focuses on weather processes and forecasting.",
@@ -136,7 +136,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:AtmosphericChemistry",
+      "@id": "uo:atmospheric-chemistry",
       "label": "atmospheric chemistry",
       "@type": "uo:Discipline",
       "comment": "Looks at the composition of planetary atmospheres and the reactions and interactions that drive these dynamic and diverse systems",
@@ -146,21 +146,21 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:Instrumental",
+      "@id": "uo:instrumental",
       "label": "instrumental",
       "@type": "uo:Discipline",
       "comment": "Observations pertaining to the instruments (sensors/platforms) themselves. For example a weather station platform typically makes observations relevant to the discipline of Meteorology, however some sensors hosted on the weather station observe the health and status of the platform itself such as battery or signal strength readings. These observations would fall under the 'instrumental' discipline.",
       "term_status": "unstable"
     },
     {
-      "@id": "uo:Ecology",
+      "@id": "uo:ecology",
       "label": "ecology",
       "@type": "uo:Discipline",
       "comment": "The relations of organisms to one another and to their physical surroundings.",
       "term_status": "unstable"
     },
     {
-      "@id": "uo:Energy",
+      "@id": "uo:energy",
       "label": "energy",
       "@type": "uo:Discipline",
       "comment": "Relates to the production and supply of energy (electricity, gas, oil, etc) to households, businesses, industry and so on.",
@@ -170,21 +170,21 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:Hydrology",
+      "@id": "uo:hydrology",
       "label": "hydrology",
       "@type": "uo:Discipline",
       "comment": "The branch of science concerned with the properties of the earth's water, and especially its movement in relation to land.",
       "term_status": "unstable"
     },
     {
-      "@id": "uo:Transport",
+      "@id": "uo:transport",
       "label": "transport",
       "@type": "uo:Discipline",
       "comment": "The movement of humans, animals and goods from one location to another.",
       "term_status": "unstable"
     },
     {
-      "@id": "uo:EnvironmentalAcoustics",
+      "@id": "uo:environmental-acoustics",
       "label": "environmental acoustics",
       "@type": "uo:Discipline",
       "comment": "The domain of science and techniques related to the study of acoustic vibrations and concerning their production, propagation and effects in relation to the preservation of environment.",
@@ -192,12 +192,12 @@
     },
 
     {
-      "@id": "uo:AirTemperature",
+      "@id": "uo:air-temperature",
       "label": "air temperature",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:DegreeCelsius",
-        "uo:Kelvin"
+        "uo:degree-celsius",
+        "uo:kelvin"
       ],
       "comment": "Air temperature is the bulk temperature of the air, not the surface (skin) temperature. A dry-bulb temperature.",
       "sameAs": [
@@ -206,11 +206,11 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:DewPointAirTemperature",
+      "@id": "uo:dew-point-air-temperature",
       "label": "dew point air temperature",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:DegreeCelsius"
+        "uo:degree-celsius"
       ],
       "comment": "Dew point air temperature is the temperature at which a parcel of air reaches saturation upon being cooled at constant pressure and specific humidity.",
       "sameAs": [
@@ -219,41 +219,41 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:GrassSurfaceTemperature",
+      "@id": "uo:grass-surface-temperature",
       "label": "grass surface temperature",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:DegreeCelsius"
+        "uo:degree-celsius"
       ],
       "comment": "Temperature of a grass covered surface. This observed property is commonly recorded at meterological observing sites.",
       "term_status": "unstable"
     },
     {
-      "@id": "uo:ConcreteSurfaceTemperature",
+      "@id": "uo:concrete-surface-temperature",
       "label": "concrete surface temperature",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:DegreeCelsius"
+        "uo:degree-celsius"
       ],
       "comment": "Temperature of a concrete surface. This observed property is commonly recorded at meterological observing sites.",
       "term_status": "unstable"
     },
     {
-      "@id": "uo:SoilTemperature",
+      "@id": "uo:soil-temperature",
       "label": "soil temperature",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:DegreeCelsius"
+        "uo:degree-celsius"
       ],
       "comment": "Temperature of the soil. This observed property is commonly recorded at meterological observing sites, typically at multiple depths.",
       "term_status": "unstable"
     },
     {
-      "@id": "uo:RelativeHumidity",
+      "@id": "uo:relative-humidity",
       "label": "relative humidity",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:Percent"
+        "uo:percent"
       ],
       "comment": "Relative humidity (RH) is the ratio of the partial pressure of water vapour to the equilibrium vapour pressure of water at a given temperature. Relative humidity depends on temperature and the pressure of the system of interest.",
       "sameAs": [
@@ -263,11 +263,11 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:AirPressure",
+      "@id": "uo:air-pressure",
       "label": "air pressure",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:Hectopascal"
+        "uo:hectopascal"
       ],
       "comment": "Air pressure is the force per unit area which would be exerted when the moving gas molecules of which the air is composed strike a theoretical surface of any orientation. This is the pressure recorded at the elevation and altitude of the pressure sensor and has NOT been corrected to mean sea level.",
       "sameAs": [
@@ -276,11 +276,11 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:AirPressureAtMeanSeaLevel",
+      "@id": "uo:air-pressure-at-mean-sea-level",
       "label": "air pressure at mean sea level",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:Hectopascal"
+        "uo:hectopascal"
       ],
       "comment": "Air pressure at sea level is the quantity often abbreviated as MSLP or PMSL. Air pressure is the force per unit area which would be exerted when the moving gas molecules of which the air is composed strike a theoretical surface of any orientation. 'Mean sea level' means the time mean of sea surface elevation at a given location over an arbitrary period sufficient to eliminate the tidal signals.",
       "sameAs": [
@@ -289,11 +289,11 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:WindSpeed",
+      "@id": "uo:wind-speed",
       "label": "wind speed",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:MetrePerSecond"
+        "uo:metre-per-second"
       ],
       "comment": "Speed is the magnitude of velocity. Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.) The wind speed is the magnitude of the wind velocity.",
       "sameAs": [
@@ -302,11 +302,11 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:WindGustSpeed",
+      "@id": "uo:wind-gust-speed",
       "label": "wind speed",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:MetrePerSecond"
+        "uo:metre-per-second"
       ],
       "comment": "Speed is the magnitude of velocity. Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.) The wind speed is the magnitude of the wind velocity. A gust is a sudden brief period of high wind speed. In an observed timeseries of wind speed, the gust wind speed can be indicated by a maximum for the time-interval.",
       "sameAs": [
@@ -315,11 +315,11 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:WindDirection",
+      "@id": "uo:wind-direction",
       "label": "wind direction",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:Degree"
+        "uo:degree"
       ],
       "comment": "Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. Given as the direction the wind has come FROM. I.e. 90° would represent an easterly wind direction from east to west.",
       "sameAs": [
@@ -328,41 +328,41 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:WindGustDirection",
+      "@id": "uo:wind-gust-direction",
       "label": "wind gust direction",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:Degree"
+        "uo:degree"
       ],
       "comment": "Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. Given as the direction the wind has come FROM. I.e. 90° would represent an easterly wind direction from east to west. Typically given in combination with a uo:WindGustSpeed observation, with the uo:WindGustDirection indicating the direction the maximum wind speeds came from.",
       "term_status": "unstable"
     },
     {
-      "@id": "uo:PrecipitationDepth",
+      "@id": "uo:precipitation-depth",
       "label": "precipitation depth",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:Millimetre"
+        "uo:millimetre"
       ],
       "comment": "An indication of the average depth of precipitation. Provided over a specified time window. Tipping bucket rain gauges typically convert precipitation volume into a depth based on the area of the gauge.",
       "term_status": "unstable"
     },
     {
-      "@id": "uo:PrecipitationRate",
+      "@id": "uo:precipitation-rate",
       "label": "precipitation rate",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:MillimetrePerHour"
+        "uo:millimetre-per-hour"
       ],
       "comment": "Indicates how heavy the precipitation is as an expected depth of precipitaton per fixed time frame, e.g. millimetres per hour.",
       "term_status": "unstable"
     },
     {
-      "@id": "uo:SolarRadiation",
+      "@id": "uo:solar-radiation",
       "label": "solar radiation",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:WattPerSquareMetre"
+        "uo:watt-per-square-metre"
       ],
       "comment": "Solar radiation is the power per unit area received from the Sun in the form of electromagnetic radiation as reported in the wavelength range of the measuring instrument. A measure of the total incoming (direct and diffuse) solar radiation. Typically measured with a pyranometer.",
       "sameAs": [
@@ -371,172 +371,172 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:LightningCount",
+      "@id": "uo:lightning-count",
       "label": "lightning count",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:Count"
+        "uo:count"
       ],
       "comment": "The number of lightning counts detected over a time period. Observations of lighting counts MUST include a phenomenonTime object detailing the start and end of this time period.",
       "term_status": "unstable"
     },
     {
-      "@id": "uo:LightningDistance",
+      "@id": "uo:lightning-distance",
       "label": "lightning distance",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:Kilometre"
+        "uo:kilometre"
       ],
       "comment": "The distance from the sensor to the observed lightning strike.",
       "term_status": "unstable"
     },
     {
-      "@id": "uo:VapourPressure",
+      "@id": "uo:vapour-pressure",
       "label": "vapour pressure",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:Kilopascal",
-        "uo:Hectopascal"
+        "uo:kilopascal",
+        "uo:hectopascal"
       ],
       "comment": "The pressure exerted by a vapour in thermodynamic equilibrium with its condensed phases (solid or liquid) at a given temperature in a closed system.",
       "term_status": "unstable"
     },
     {
-      "@id": "uo:BatteryVoltage",
+      "@id": "uo:battery-voltage",
       "label": "battery voltage",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:Volt"
+        "uo:volt"
       ],
       "comment": "The voltage reading of a battery.",
       "term_status": "unstable"
     },
     {
-      "@id": "uo:BatteryRemaining",
+      "@id": "uo:battery-remaining",
       "label": "battery remaining",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:Percent"
+        "uo:percent"
       ],
       "comment": "The percentage of battery remaining.",
       "term_status": "unstable"
     },
     {
-      "@id": "uo:LAeq",
-      "label": "A-weighted, equivalent continuous sound level",
+      "@id": "uo:la-eq",
+      "label": "LAeq",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:Decibel"
+        "uo:decibel"
       ],
       "comment": "A-weighted equivalent continuous sound level in decibels measured over a stated period of time. A-weighting is a filter applied to the sound pressure level in an effort to account for the relative loudness perceived by the human ear, which is less sensitive to low audio frequencies. This means that A-weighted measurements correlate well with the perceived loudness at low sound levels.",
       "term_status": "unstable"
     },
     {
-      "@id": "uo:LAFmax",
-      "label": "A-weighted, fast time-constant, maximum, sound level",
+      "@id": "uo:laf-max",
+      "label": "LAFmax",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:Decibel"
+        "uo:decibel"
       ],
       "comment": "The maximum noise level with A-weighted frequency response and Fast time constant. A-weighting is a filter applied to the sound pressure level in an effort to account for the relative loudness perceived by the human ear, which is less sensitive to low audio frequencies. This means that A-weighted measurements correlate well with the perceived loudness at low sound levels. 'Fast time constant' means that only audio signals with a rise and decay time of up to 125 ms are considered.",
       "term_status": "unstable"
     },
     {
-      "@id": "uo:LA10",
-      "label": "A-weighted, sound level exceeded for 10% of the measurement period",
+      "@id": "uo:la-10",
+      "label": "LA10",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:Decibel"
+        "uo:decibel"
       ],
       "comment": "A-weighted, sound level exceeded for 10% of the measurement period. A-weighting is a filter applied to the sound pressure level in an effort to account for the relative loudness perceived by the human ear, which is less sensitive to low audio frequencies. This means that A-weighted measurements correlate well with the perceived loudness at low sound levels. LA10 is extensively used for rating traffic noise",
       "term_status": "unstable"
     },
     {
-      "@id": "uo:LA50",
-      "label": "A-weighted, sound level exceeded for 50% of the measurement period",
+      "@id": "uo:la-50",
+      "label": "LA50",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:Decibel"
+        "uo:decibel"
       ],
       "comment": "A-weighted, sound level exceeded for 50% of the measurement period. A-weighting is a filter applied to the sound pressure level in an effort to account for the relative loudness perceived by the human ear, which is less sensitive to low audio frequencies. This means that A-weighted measurements correlate well with the perceived loudness at low sound levels.",
       "term_status": "unstable"
     },
     {
-      "@id": "uo:LA90",
-      "label": "A-weighted, sound level exceeded for 90% of the measurement period",
+      "@id": "uo:la-90",
+      "label": "LA90",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:Decibel"
+        "uo:decibel"
       ],
       "comment": "A-weighted, sound level exceeded for 90% of the measurement period. A-weighting is a filter applied to the sound pressure level in an effort to account for the relative loudness perceived by the human ear, which is less sensitive to low audio frequencies. This means that A-weighted measurements correlate well with the perceived loudness at low sound levels. LA90 is extensively used for rating background noise",
       "term_status": "unstable"
     },
     {
-      "@id": "uo:LCeq",
-      "label": "C-weighted, equivalent continuous sound level",
+      "@id": "uo:lc-eq",
+      "label": "LCeq",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:Decibel"
+        "uo:decibel"
       ],
       "comment": "C-weighted equivalent continuous sound level in decibels measured over a stated period of time. C-weighting is a filter applied to the sound pressure level in order to describe the response of the human ear to high noise levels. C-weighted measurements are commonly used to assess the effect of impulse noises on the human ear.",
       "term_status": "unstable"
     },
     {
-      "@id": "uo:LCFmax",
-      "label": "C-weighted, fast time-constant, maximum, sound level",
+      "@id": "uo:lcf-max",
+      "label": "LCFmax",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:Decibel"
+        "uo:decibel"
       ],
       "comment": "The maximum noise level with C-weighted frequency response and Fast time constant. C-weighted equivalent continuous sound level in decibels measured over a stated period of time. C-weighting is a filter applied to the sound pressure level in order to describe the response of the human ear to high noise levels. C-weighted measurements are commonly used to assess the effect of impulse noises on the human ear. 'Fast time constant' means that only audio signals with a rise and decay time of up to 125 ms are considered.",
       "term_status": "unstable"
     },
     {
-      "@id": "uo:LC10",
-      "label": "C-weighted, sound level exceeded for 10% of the measurement period",
+      "@id": "uo:lc-10",
+      "label": "LC10",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:Decibel"
+        "uo:decibel"
       ],
       "comment": "C-weighted, sound level exceeded for 10% of the measurement period. C-weighting is a filter applied to the sound pressure level in order to describe the response of the human ear to high noise levels. C-weighted measurements are commonly used to assess the effect of impulse noises on the human ear.",
       "term_status": "unstable"
     },
     {
-      "@id": "uo:LC50",
-      "label": "C-weighted, sound level exceeded for 50% of the measurement period",
+      "@id": "uo:lc-50",
+      "label": "LC50",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:Decibel"
+        "uo:decibel"
       ],
       "comment": "C-weighted, sound level exceeded for 50% of the measurement period. C-weighting is a filter applied to the sound pressure level in order to describe the response of the human ear to high noise levels. C-weighted measurements are commonly used to assess the effect of impulse noises on the human ear.",
       "term_status": "unstable"
     },
     {
-      "@id": "uo:LC90",
-      "label": "C-weighted, sound level exceeded for 90% of the measurement period",
+      "@id": "uo:lc-90",
+      "label": "LC90",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:Decibel"
+        "uo:decibel"
       ],
       "comment": "C-weighted, sound level exceeded for 90% of the measurement period. C-weighting is a filter applied to the sound pressure level in order to describe the response of the human ear to high noise levels. C-weighted measurements are commonly used to assess the effect of impulse noises on the human ear.",
       "term_status": "unstable"
     },
     {
-      "@id": "uo:TiltNorthSouth",
+      "@id": "uo:tilt-north-south",
       "label": "tilt (north/south)",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:Degree"
+        "uo:degree"
       ],
       "comment": "The degree to which a something (e.g. a sensor platform) has been tilted from an upright position in the north/south direction. North is positive, south is negative. When the thing being measured is directly upright the value is 0°. If it tilts towards the northerly direction the value will increase. If it tilts towards the southerly direction the value will decrease. For example, if the tilt of a metal post was being measured, and the post was knocked 10° from its upright direction towards the south the value would be -10°. If it was pushed back towards the north and fell completely flat on the ground the value would be +90°.",
       "term_status": "unstable"
     },
     {
-      "@id": "uo:TiltWestEast",
+      "@id": "uo:tilt-west-east",
       "label": "tilt (west/east)",
       "@type": "sosa:ObservableProperty",
       "recommendedUnits": [
-        "uo:Degree"
+        "uo:degree"
       ],
       "comment": "The degree to which a something (e.g. a sensor platform) has been tilted from an upright position in the west/east direction. West is positive, east is negative. When the thing being measured is directly upright the value is 0°. If it tilts towards the westerly direction the value will increase. If it tilts towards the easterly direction the value will decrease. For example, if the tilt of a metal post was being measured, and the post was knocked 10° from its upright direction towards the east the value would be -10°. If it was pushed back towards the west and fell completely flat on the ground the value would be +90°.",
       "term_status": "unstable"
@@ -544,7 +544,7 @@
 
 
     {
-      "@id": "uo:DegreeCelsius",
+      "@id": "uo:degree-celsius",
       "@type": "uo:Unit",
       "label": "degree celsius",
       "symbol": "°C",
@@ -555,7 +555,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:Kelvin",
+      "@id": "uo:kelvin",
       "@type": "uo:Unit",
       "label": "kelvin",
       "symbol": "K",
@@ -566,7 +566,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:Percent",
+      "@id": "uo:percent",
       "@type": "uo:Unit",
       "label": "percent",
       "symbol": "%",
@@ -577,7 +577,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:Hectopascal",
+      "@id": "uo:hectopascal",
       "@type": "uo:Unit",
       "label": "hectopascal",
       "symbol": "hPa",
@@ -588,7 +588,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:MetrePerSecond",
+      "@id": "uo:metre-per-second",
       "@type": "uo:Unit",
       "label": "metre per second",
       "symbol": "m/s",
@@ -599,7 +599,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:Degree",
+      "@id": "uo:degree",
       "@type": "uo:Unit",
       "label": "degree",
       "symbol": "°",
@@ -610,7 +610,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:Millimetre",
+      "@id": "uo:millimetre",
       "@type": "uo:Unit",
       "label": "millimetre",
       "symbol": "mm",
@@ -621,7 +621,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:MillimetrePerHour",
+      "@id": "uo:millimetre-per-hour",
       "@type": "uo:Unit",
       "label": "millimetre per hour",
       "symbol": "mm/h",
@@ -629,7 +629,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:KilometrePerHour",
+      "@id": "uo:kilometre-per-hour",
       "@type": "uo:Unit",
       "label": "kilometre per hour",
       "symbol": "km/h",
@@ -640,7 +640,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:Kilometre",
+      "@id": "uo:kilometre",
       "@type": "uo:Unit",
       "label": "kilometre",
       "symbol": "km",
@@ -651,7 +651,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:Kilopascal",
+      "@id": "uo:kilopascal",
       "@type": "uo:Unit",
       "label": "kilopascal",
       "symbol": "kPa",
@@ -662,7 +662,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:Count",
+      "@id": "uo:count",
       "@type": "uo:Unit",
       "label": "count",
       "comment": "A dimensionless number indicating a count of something.",
@@ -672,7 +672,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:WattPerSquareMetre",
+      "@id": "uo:watt-per-square-metre",
       "@type": "uo:Unit",
       "label": "watt per square metre",
       "symbol": "W/m²",
@@ -683,7 +683,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:PartsPerMillion",
+      "@id": "uo:parts-per-million",
       "@type": "uo:Unit",
       "label": "parts per million",
       "symbol": "ppm",
@@ -694,7 +694,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:PartsPerBillion",
+      "@id": "uo:parts-per-billion",
       "@type": "uo:Unit",
       "label": "parts per billion",
       "symbol": "ppb",
@@ -705,7 +705,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:MicrogramPerCubicMetre",
+      "@id": "uo:microgram-per-cubic-metre",
       "@type": "uo:Unit",
       "label": "microgram per cubic metre",
       "symbol": "µg/m³",
@@ -713,7 +713,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:Decibel",
+      "@id": "uo:decibel",
       "@type": "uo:Unit",
       "label": "decibel",
       "symbol": "dB",
@@ -724,7 +724,7 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:Volt",
+      "@id": "uo:volt",
       "@type": "uo:Unit",
       "label": "volt",
       "symbol": "V",
