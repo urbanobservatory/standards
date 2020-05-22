@@ -1,0 +1,9 @@
+[
+  {
+    "@id": "uo:earth-atmosphere",
+    "label": "earth atmosphere",
+    "@type": "uo:FeatureOfInterest",
+    "comment": "Earth atmosphere is the layer of gases, commonly known as air, that surrounds the planet Earth and is retained by Earth's gravity.",
+    "term_status": "unstable"
+  }
+]
