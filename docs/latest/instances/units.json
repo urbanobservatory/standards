@@ -1,193 +1,210 @@
-[
-  {
-    "@id": "uo:degree-celsius",
-    "@type": "uo:Unit",
-    "label": "degree celsius",
-    "symbol": "°C",
-    "comment": "Celsius, also known as centigrade, is a scale and unit of measurement for temperature. It can refer to a specific temperature on the Celsius scale as well as a unit to indicate a temperature interval, a difference between two temperatures or an uncertainty. This definition fixes the magnitude of both the degree Celsius and the kelvin as precisely 1 part in 273.16 (approximately 0.00366) of the difference between absolute zero and the triple point of water. Thus, it sets the magnitude of one degree Celsius and that of one kelvin as exactly the same. Additionally, it establishes the difference between the two scales' null points as being precisely 273.15°C.",
-    "sameAs": [
-      "qudtUnit:DEG_C"
-    ],
-    "term_status": "unstable"
+{
+  "@context": {
+    "uo": "https://urbanobservatory.ac.uk/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "vs": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+
+    "defines": {
+      "@reverse": "rdfs:isDefinedBy"
+    },
+    "label": "rdfs:label",
+    "comment": "rdfs:comment",
+    "term_status": "vs:term_status",
+    "sameAs": "owl:sameAs",
+    "symbol": "qudt:symbol"
   },
-  {
-    "@id": "uo:kelvin",
-    "@type": "uo:Unit",
-    "label": "kelvin",
-    "symbol": "K",
-    "comment": "The SI base unit of temperature, previously called the degree Kelvin. One kelvin represents the same temperature difference as one degree Celsius. In 1967 the General Conference on Weights and Measures defined the temperature of the triple point of water (the temperature at which water exists simultaneously in the gaseous, liquid, and solid states) to be exactly 273.16 kelvins. Since this temperature is also equal to 0.01 u00b0C, the temperature in kelvins is always equal to 273.15 plus the temperature in degrees Celsius. The kelvin equals exactly 1.8 degrees Fahrenheit. The unit is named for the British mathematician and physicist William Thomson (1824-1907), later known as Lord Kelvin after he was named Baron Kelvin of Largs.",
-    "sameAs": [
-      "qudtUnit:K"
-    ],
-    "term_status": "unstable"
-  },
-  {
-    "@id": "uo:percent",
-    "@type": "uo:Unit",
-    "label": "percent",
-    "symbol": "%",
-    "comment": "'Percent' is a unit for 'Dimensionless Ratio' expressed as %.",
-    "sameAs": [
-      "qudtUnit:PERCENT"
-    ],
-    "term_status": "unstable"
-  },
-  {
-    "@id": "uo:hectopascal",
-    "@type": "uo:Unit",
-    "label": "hectopascal",
-    "symbol": "hPa",
-    "comment": "Hectopascal is a unit of pressure. 1 Pa is approximately the pressure exerted by a 10 g mass resting on a 1 cm squared area. 1013 hPa = 1 atm. There are 100 pascals in 1 hectopascal.",
-    "sameAs": [
-      "qudtUnit:HectoPA"
-    ],
-    "term_status": "unstable"
-  },
-  {
-    "@id": "uo:metre-per-second",
-    "@type": "uo:Unit",
-    "label": "metre per second",
-    "symbol": "m/s",
-    "comment": "Metre per second is an SI derived unit of both speed (scalar) and velocity (vector quantity which specifies both magnitude and a specific direction), defined by distance in metres divided by time in seconds.",
-    "sameAs": [
-      "qudtUnit:M-PER-SEC"
-    ],
-    "term_status": "unstable"
-  },
-  {
-    "@id": "uo:degree",
-    "@type": "uo:Unit",
-    "label": "degree",
-    "symbol": "°",
-    "comment": "A degree (in full, a degree of arc, arc degree, or arcdegree), usually denoted by ∘ (the degree symbol), is a measurement of plane angle, representing 1/360 of a full rotation; one degree is equivalent to 2π/360rad, 0.017453rad. It is not an SI unit, as the SI unit for angles is radian, but is an accepted SI unit.",
-    "sameAs": [
-      "qudtUnit:DEG"
-    ],
-    "term_status": "unstable"
-  },
-  {
-    "@id": "uo:millimetre",
-    "@type": "uo:Unit",
-    "label": "millimetre",
-    "symbol": "mm",
-    "comment": "Unit of distance. Equal to one thousandth of a metre, which is the SI base unit of length.",
-    "sameAs": [
-      "qudtUnit:MilliM"
-    ],
-    "term_status": "unstable"
-  },
-  {
-    "@id": "uo:millimetre-per-hour",
-    "@type": "uo:Unit",
-    "label": "millimetre per hour",
-    "symbol": "mm/h",
-    "comment": "A measure of speed. Also commonly used for the observable property uo:PrecipitationRate as a depth of rainfall per hour.",
-    "term_status": "unstable"
-  },
-  {
-    "@id": "uo:kilometre-per-hour",
-    "@type": "uo:Unit",
-    "label": "kilometre per hour",
-    "symbol": "km/h",
-    "comment": "Kilometer per Hour is a C.G.S System unit for 'Linear Velocity'.",
-    "sameAs": [
-      "qudtUnit:KiloM-PER-HR"
-    ],
-    "term_status": "unstable"
-  },
-  {
-    "@id": "uo:kilometre",
-    "@type": "uo:Unit",
-    "label": "kilometre",
-    "symbol": "km",
-    "comment": "A common metric unit of length or distance. One kilometer equals exactly 1000 meters, about 0.621 371 19 mile, 1093.6133 yards, or 3280.8399 feet. Oddly, higher multiples of the meter are rarely used; even the distances to the farthest galaxies are usually measured in kilometers.",
-    "sameAs": [
-      "qudtUnit:KiloM"
-    ],
-    "term_status": "unstable"
-  },
-  {
-    "@id": "uo:kilopascal",
-    "@type": "uo:Unit",
-    "label": "kilopascal",
-    "symbol": "kPa",
-    "comment": "Kilopascal is a unit of pressure. 1 kPa is approximately the pressure exerted by a 10-g mass resting on a 1-cm2 area. 101.3 kPa = 1 atm. There are 1,000 pascals in 1 kilopascal.",
-    "sameAs": [
-      "qudtUnit:KiloPA"
-    ],
-    "term_status": "unstable"
-  },
-  {
-    "@id": "uo:count",
-    "@type": "uo:Unit",
-    "label": "count",
-    "comment": "A dimensionless number indicating a count of something.",
-    "sameAs": [
-      "qudtUnit:NUM"
-    ],
-    "term_status": "unstable"
-  },
-  {
-    "@id": "uo:watt-per-square-metre",
-    "@type": "uo:Unit",
-    "label": "watt per square metre",
-    "symbol": "W/m²",
-    "comment": "A unit of irradiance defined as the power received per area. This is a unit in the category of Energy flux. It is also known as watts per square meter, watt per square metre, watts per square metre, watt/square meter, watt/square metre. This unit is commonly used in the SI unit system. This unit is the standard SI unit in this category.",
-    "sameAs": [
-      "qudtUnit:W-PER-M2"
-    ],
-    "term_status": "unstable"
-  },
-  {
-    "@id": "uo:parts-per-million",
-    "@type": "uo:Unit",
-    "label": "parts per million",
-    "symbol": "ppm",
-    "comment": "Dimensionless unit for concentration.",
-    "sameAs": [
-      "qudtUnit:PPM"
-    ],
-    "term_status": "unstable"
-  },
-  {
-    "@id": "uo:parts-per-billion",
-    "@type": "uo:Unit",
-    "label": "parts per billion",
-    "symbol": "ppb",
-    "comment": "Dimensionless unit for concentration.",
-    "sameAs": [
-      "qudtUnit:PPB"
-    ],
-    "term_status": "unstable"
-  },
-  {
-    "@id": "uo:microgram-per-cubic-metre",
-    "@type": "uo:Unit",
-    "label": "microgram per cubic metre",
-    "symbol": "µg/m³",
-    "comment": "Unit of density, defined by mass in micrograms divided by volume in cubic metres. Commonly used for National Air Quality Objectives.",
-    "term_status": "unstable"
-  },
-  {
-    "@id": "uo:decibel",
-    "@type": "uo:Unit",
-    "label": "decibel",
-    "symbol": "dB",
-    "comment": "A customary logarithmic measure most commonly used (in various ways) for measuring sound.The beginning of the scale, 0 decibels, can be set in different ways, depending on exactly the aspect of sound being measured. For sound intensity (the power of the sound waves per unit of area) 0 decibel is equal to 1 picowatts per metre squared. This corresponds approximately to the faintest sound that can be detected by a person who has good hearing. For sound pressure (the pressure exerted by the sound waves) 0 decibels equals 20 micropascals RMS, and for sound power 0 decibels sometimes equals 1 picowatt. In all cases, one decibel equals ≈ 0.115129 neper.",
-    "sameAs": [
-      "qudtUnit:DeciB"
-    ],
-    "term_status": "unstable"
-  },
-  {
-    "@id": "uo:volt",
-    "@type": "uo:Unit",
-    "label": "volt",
-    "symbol": "V",
-    "comment": "Volt is the SI unit of electric potential. Electric potential is defined as the amount of potential energy present per unit of charge. Electric potential is measured in volts, with one volt representing a potential of one joule per coulomb of charge. The volt also may be expressed with a variety of other units. For example, a volt is also equal to one watt per ampere (W/A) and one joule per ampere per second (J/A/s).",
-    "sameAs": [
-      "qudtUnit:V"
-    ],
-    "term_status": "unstable"
-  }
-]
+  "defines": [
+    {
+      "@id": "uo:degree-celsius",
+      "@type": "uo:Unit",
+      "label": "degree celsius",
+      "symbol": "°C",
+      "comment": "Celsius, also known as centigrade, is a scale and unit of measurement for temperature. It can refer to a specific temperature on the Celsius scale as well as a unit to indicate a temperature interval, a difference between two temperatures or an uncertainty. This definition fixes the magnitude of both the degree Celsius and the kelvin as precisely 1 part in 273.16 (approximately 0.00366) of the difference between absolute zero and the triple point of water. Thus, it sets the magnitude of one degree Celsius and that of one kelvin as exactly the same. Additionally, it establishes the difference between the two scales' null points as being precisely 273.15°C.",
+      "sameAs": [
+        "qudtUnit:DEG_C"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:kelvin",
+      "@type": "uo:Unit",
+      "label": "kelvin",
+      "symbol": "K",
+      "comment": "The SI base unit of temperature, previously called the degree Kelvin. One kelvin represents the same temperature difference as one degree Celsius. In 1967 the General Conference on Weights and Measures defined the temperature of the triple point of water (the temperature at which water exists simultaneously in the gaseous, liquid, and solid states) to be exactly 273.16 kelvins. Since this temperature is also equal to 0.01 u00b0C, the temperature in kelvins is always equal to 273.15 plus the temperature in degrees Celsius. The kelvin equals exactly 1.8 degrees Fahrenheit. The unit is named for the British mathematician and physicist William Thomson (1824-1907), later known as Lord Kelvin after he was named Baron Kelvin of Largs.",
+      "sameAs": [
+        "qudtUnit:K"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:percent",
+      "@type": "uo:Unit",
+      "label": "percent",
+      "symbol": "%",
+      "comment": "'Percent' is a unit for 'Dimensionless Ratio' expressed as %.",
+      "sameAs": [
+        "qudtUnit:PERCENT"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:hectopascal",
+      "@type": "uo:Unit",
+      "label": "hectopascal",
+      "symbol": "hPa",
+      "comment": "Hectopascal is a unit of pressure. 1 Pa is approximately the pressure exerted by a 10 g mass resting on a 1 cm squared area. 1013 hPa = 1 atm. There are 100 pascals in 1 hectopascal.",
+      "sameAs": [
+        "qudtUnit:HectoPA"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:metre-per-second",
+      "@type": "uo:Unit",
+      "label": "metre per second",
+      "symbol": "m/s",
+      "comment": "Metre per second is an SI derived unit of both speed (scalar) and velocity (vector quantity which specifies both magnitude and a specific direction), defined by distance in metres divided by time in seconds.",
+      "sameAs": [
+        "qudtUnit:M-PER-SEC"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:degree",
+      "@type": "uo:Unit",
+      "label": "degree",
+      "symbol": "°",
+      "comment": "A degree (in full, a degree of arc, arc degree, or arcdegree), usually denoted by ∘ (the degree symbol), is a measurement of plane angle, representing 1/360 of a full rotation; one degree is equivalent to 2π/360rad, 0.017453rad. It is not an SI unit, as the SI unit for angles is radian, but is an accepted SI unit.",
+      "sameAs": [
+        "qudtUnit:DEG"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:millimetre",
+      "@type": "uo:Unit",
+      "label": "millimetre",
+      "symbol": "mm",
+      "comment": "Unit of distance. Equal to one thousandth of a metre, which is the SI base unit of length.",
+      "sameAs": [
+        "qudtUnit:MilliM"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:millimetre-per-hour",
+      "@type": "uo:Unit",
+      "label": "millimetre per hour",
+      "symbol": "mm/h",
+      "comment": "A measure of speed. Also commonly used for the observable property uo:PrecipitationRate as a depth of rainfall per hour.",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:kilometre-per-hour",
+      "@type": "uo:Unit",
+      "label": "kilometre per hour",
+      "symbol": "km/h",
+      "comment": "Kilometer per Hour is a C.G.S System unit for 'Linear Velocity'.",
+      "sameAs": [
+        "qudtUnit:KiloM-PER-HR"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:kilometre",
+      "@type": "uo:Unit",
+      "label": "kilometre",
+      "symbol": "km",
+      "comment": "A common metric unit of length or distance. One kilometer equals exactly 1000 meters, about 0.621 371 19 mile, 1093.6133 yards, or 3280.8399 feet. Oddly, higher multiples of the meter are rarely used; even the distances to the farthest galaxies are usually measured in kilometers.",
+      "sameAs": [
+        "qudtUnit:KiloM"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:kilopascal",
+      "@type": "uo:Unit",
+      "label": "kilopascal",
+      "symbol": "kPa",
+      "comment": "Kilopascal is a unit of pressure. 1 kPa is approximately the pressure exerted by a 10-g mass resting on a 1-cm2 area. 101.3 kPa = 1 atm. There are 1,000 pascals in 1 kilopascal.",
+      "sameAs": [
+        "qudtUnit:KiloPA"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:count",
+      "@type": "uo:Unit",
+      "label": "count",
+      "comment": "A dimensionless number indicating a count of something.",
+      "sameAs": [
+        "qudtUnit:NUM"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:watt-per-square-metre",
+      "@type": "uo:Unit",
+      "label": "watt per square metre",
+      "symbol": "W/m²",
+      "comment": "A unit of irradiance defined as the power received per area. This is a unit in the category of Energy flux. It is also known as watts per square meter, watt per square metre, watts per square metre, watt/square meter, watt/square metre. This unit is commonly used in the SI unit system. This unit is the standard SI unit in this category.",
+      "sameAs": [
+        "qudtUnit:W-PER-M2"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:parts-per-million",
+      "@type": "uo:Unit",
+      "label": "parts per million",
+      "symbol": "ppm",
+      "comment": "Dimensionless unit for concentration.",
+      "sameAs": [
+        "qudtUnit:PPM"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:parts-per-billion",
+      "@type": "uo:Unit",
+      "label": "parts per billion",
+      "symbol": "ppb",
+      "comment": "Dimensionless unit for concentration.",
+      "sameAs": [
+        "qudtUnit:PPB"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:microgram-per-cubic-metre",
+      "@type": "uo:Unit",
+      "label": "microgram per cubic metre",
+      "symbol": "µg/m³",
+      "comment": "Unit of density, defined by mass in micrograms divided by volume in cubic metres. Commonly used for National Air Quality Objectives.",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:decibel",
+      "@type": "uo:Unit",
+      "label": "decibel",
+      "symbol": "dB",
+      "comment": "A customary logarithmic measure most commonly used (in various ways) for measuring sound.The beginning of the scale, 0 decibels, can be set in different ways, depending on exactly the aspect of sound being measured. For sound intensity (the power of the sound waves per unit of area) 0 decibel is equal to 1 picowatts per metre squared. This corresponds approximately to the faintest sound that can be detected by a person who has good hearing. For sound pressure (the pressure exerted by the sound waves) 0 decibels equals 20 micropascals RMS, and for sound power 0 decibels sometimes equals 1 picowatt. In all cases, one decibel equals ≈ 0.115129 neper.",
+      "sameAs": [
+        "qudtUnit:DeciB"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:volt",
+      "@type": "uo:Unit",
+      "label": "volt",
+      "symbol": "V",
+      "comment": "Volt is the SI unit of electric potential. Electric potential is defined as the amount of potential energy present per unit of charge. Electric potential is measured in volts, with one volt representing a potential of one joule per coulomb of charge. The volt also may be expressed with a variety of other units. For example, a volt is also equal to one watt per ampere (W/A) and one joule per ampere per second (J/A/s).",
+      "sameAs": [
+        "qudtUnit:V"
+      ],
+      "term_status": "unstable"
+    }
+  ]
+}

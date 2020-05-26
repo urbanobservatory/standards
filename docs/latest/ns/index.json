@@ -60,8 +60,7 @@
       "@type": "@id"
     },
     "term_status": "vs:term_status",
-    "sameAs": "owl:sameAs",
-    "symbol": "qudt:symbol"
+    "sameAs": "owl:sameAs"
   },
 
   "@id": "https://urbanobservatory.github.io/standards/latest/ns",
