@@ -402,6 +402,16 @@
         "cf:mass_concentration_of_pm10_ambient_aerosol_particles_in_air"
       ],
       "term_status": "unstable"
+    },
+    {
+      "@id": "uo:received-signal-strength-indicator",
+      "label": "received signal strength indicator",
+      "@type": "uo:ObservableProperty",
+      "recommendedUnits": [
+        "uo:uo:decibel"
+      ],
+      "comment": "Received Signal Strength Indicator (RSSI) is a measurement of the power present in a received radio signal.",
+      "term_status": "unstable"
     }
   ]
 }
