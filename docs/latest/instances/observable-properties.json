@@ -363,6 +363,45 @@
       ],
       "comment": "The degree to which a something (e.g. a sensor platform) has been tilted from an upright position in the west/east direction. West is positive, east is negative. When the thing being measured is directly upright the value is 0°. If it tilts towards the westerly direction the value will increase. If it tilts towards the easterly direction the value will decrease. For example, if the tilt of a metal post was being measured, and the post was knocked 10° from its upright direction towards the east the value would be -10°. If it was pushed back towards the west and fell completely flat on the ground the value would be +90°.",
       "term_status": "unstable"
+    },
+    {
+      "@id": "uo:pm1-mass-concentration",
+      "label": "PM₁ Mass Concentration",
+      "@type": "uo:ObservableProperty",
+      "recommendedUnits": [
+        "uo:microgram-per-cubic-metre"
+      ],
+      "comment": "PM1 is particulate matter 1 micrometers or less in diameter. Mass concentration means mass per unit volume.",
+      "sameAs": [
+        "cf:mass_concentration_of_pm1_ambient_aerosol_particles_in_air"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:pm2p5-mass-concentration",
+      "label": "PM₂.₅ Mass Concentration",
+      "@type": "uo:ObservableProperty",
+      "recommendedUnits": [
+        "uo:microgram-per-cubic-metre"
+      ],
+      "comment": "PM1 is particulate matter 2.5 micrometers or less in diameter. Mass concentration means mass per unit volume.",
+      "sameAs": [
+        "cf:mass_concentration_of_pm2p5_ambient_aerosol_particles_in_air"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:pm10-mass-concentration",
+      "label": "PM₁₀ Mass Concentration",
+      "@type": "uo:ObservableProperty",
+      "recommendedUnits": [
+        "uo:microgram-per-cubic-metre"
+      ],
+      "comment": "PM10 is particulate matter 10 micrometers or less in diameter. Mass concentration means mass per unit volume.",
+      "sameAs": [
+        "cf:mass_concentration_of_pm10_ambient_aerosol_particles_in_air"
+      ],
+      "term_status": "unstable"
     }
   ]
 }
