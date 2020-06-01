@@ -408,7 +408,7 @@
       "label": "received signal strength indicator",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
-        "uo:uo:decibel"
+        "uo:decibel"
       ],
       "comment": "Received Signal Strength Indicator (RSSI) is a measurement of the power present in a received radio signal.",
       "term_status": "unstable"
