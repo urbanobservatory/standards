@@ -3,20 +3,21 @@
     "uo": "https://urbanobservatory.ac.uk/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "vs": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
+    "schema": "https://schema.org/",
 
     "defines": {
       "@reverse": "rdfs:isDefinedBy"
     },
     "label": "rdfs:label",
-    "comment": "rdfs:comment",
+    "description": "schema:description",
     "term_status": "vs:term_status"
   },
   "defines": [
     {
       "@id": "uo:earth-atmosphere",
-      "label": "earth atmosphere",
+      "label": "Earth atmosphere",
       "@type": "uo:FeatureOfInterest",
-      "comment": "Earth atmosphere is the layer of gases, commonly known as air, that surrounds the planet Earth and is retained by Earth's gravity.",
+      "description": "Earth atmosphere is the layer of gases, commonly known as air, that surrounds the planet Earth and is retained by Earth's gravity.",
       "term_status": "unstable"
     }
   ]
