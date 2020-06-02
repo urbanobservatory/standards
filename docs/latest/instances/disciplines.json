@@ -1,0 +1,83 @@
+{
+  "@context": {
+    "uo": "https://urbanobservatory.ac.uk/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "vs": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+
+    "defines": {
+      "@reverse": "rdfs:isDefinedBy"
+    },
+    "label": "rdfs:label",
+    "comment": "rdfs:comment",
+    "term_status": "vs:term_status",
+    "sameAs": "owl:sameAs"
+  },
+  "defines": [
+    {
+      "@id": "uo:meteorology",
+      "label": "meteorology",
+      "@type": "uo:Discipline",
+      "comment": "The scientific study of the atmosphere that focuses on weather processes and forecasting.",
+      "sameAs": [
+        "qudtDiscipline:Meteorology"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:atmospheric-chemistry",
+      "label": "atmospheric chemistry",
+      "@type": "uo:Discipline",
+      "comment": "Looks at the composition of planetary atmospheres and the reactions and interactions that drive these dynamic and diverse systems",
+      "sameAs": [
+        "qudtDiscipline:AtmosphericChemistry"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:instrumental",
+      "label": "instrumental",
+      "@type": "uo:Discipline",
+      "comment": "Observations pertaining to the instruments (sensors/platforms) themselves. For example a weather station platform typically makes observations relevant to the discipline of Meteorology, however some sensors hosted on the weather station observe the health and status of the platform itself such as battery or signal strength readings. These observations would fall under the 'instrumental' discipline.",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:ecology",
+      "label": "ecology",
+      "@type": "uo:Discipline",
+      "comment": "The relations of organisms to one another and to their physical surroundings.",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:energy",
+      "label": "energy",
+      "@type": "uo:Discipline",
+      "comment": "Relates to the production and supply of energy (electricity, gas, oil, etc) to households, businesses, industry and so on.",
+      "sameAs": [
+        "qudtDiscipline:Energy"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:hydrology",
+      "label": "hydrology",
+      "@type": "uo:Discipline",
+      "comment": "The branch of science concerned with the properties of the earth's water, and especially its movement in relation to land.",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:transport",
+      "label": "transport",
+      "@type": "uo:Discipline",
+      "comment": "The movement of humans, animals and goods from one location to another.",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:environmental-acoustics",
+      "label": "environmental acoustics",
+      "@type": "uo:Discipline",
+      "comment": "The domain of science and techniques related to the study of acoustic vibrations and concerning their production, propagation and effects in relation to the preservation of environment.",
+      "term_status": "unstable"
+    }
+  ]
+}

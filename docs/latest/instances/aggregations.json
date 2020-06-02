@@ -1,0 +1,58 @@
+{
+  "@context": {
+    "uo": "https://urbanobservatory.ac.uk/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "vs": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
+
+    "defines": {
+      "@reverse": "rdfs:isDefinedBy"
+    },
+    "label": "rdfs:label",
+    "comment": "rdfs:comment",
+    "term_status": "vs:term_status"
+  },
+  "defines": [
+    {
+      "@id": "uo:average",
+      "@type": "uo:Aggregation",
+      "label": "average",
+      "comment": "An average of observations made over the given time window.",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:count",
+      "@type": "uo:Aggregation",
+      "label": "count",
+      "comment": "The total count over the given time window.",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:instant",
+      "@type": "uo:Aggregation",
+      "label": "instant",
+      "comment": "An instantaneous observation recorded at single point in time.",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:maximum",
+      "@type": "uo:Aggregation",
+      "label": "maximum",
+      "comment": "The maximum value observed over the given time window.",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:minimum",
+      "@type": "uo:Aggregation",
+      "label": "minimum",
+      "comment": "The minimum value observed over the given time window.",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:sum",
+      "@type": "uo:Aggregation",
+      "label": "sum",
+      "comment": "The sum of values observed over the given time window.",
+      "term_status": "unstable"
+    }
+  ]
+}
