@@ -140,7 +140,7 @@
     },
     {
       "@id": "uo:wind-direction",
-      "label": "wind direction",
+      "label": "Wind direction",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
         "uo:degree"
