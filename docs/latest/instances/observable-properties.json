@@ -4,25 +4,26 @@
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "vs": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
     "owl": "http://www.w3.org/2002/07/owl#",
+    "schema": "https://schema.org/",
 
     "defines": {
       "@reverse": "rdfs:isDefinedBy"
     },
     "label": "rdfs:label",
-    "comment": "rdfs:comment",
+    "description": "schema:description",
     "term_status": "vs:term_status",
     "sameAs": "owl:sameAs"
   },
   "defines": [
     {
       "@id": "uo:air-temperature",
-      "label": "air temperature",
+      "label": "Air temperature",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
         "uo:degree-celsius",
         "uo:kelvin"
       ],
-      "comment": "Air temperature is the bulk temperature of the air, not the surface (skin) temperature. A dry-bulb temperature.",
+      "description": "Air temperature is the bulk temperature of the air, not the surface (skin) temperature. A dry-bulb temperature.",
       "sameAs": [
         "cf:air_temperature_tr"
       ],
@@ -30,12 +31,12 @@
     },
     {
       "@id": "uo:dew-point-air-temperature",
-      "label": "dew point air temperature",
+      "label": "Dew point air temperature",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
         "uo:degree-celsius"
       ],
-      "comment": "Dew point air temperature is the temperature at which a parcel of air reaches saturation upon being cooled at constant pressure and specific humidity.",
+      "description": "Dew point air temperature is the temperature at which a parcel of air reaches saturation upon being cooled at constant pressure and specific humidity.",
       "sameAs": [
         "cf:dew_point_temperature"
       ],
@@ -43,42 +44,42 @@
     },
     {
       "@id": "uo:grass-surface-temperature",
-      "label": "grass surface temperature",
+      "label": "Grass surface temperature",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
         "uo:degree-celsius"
       ],
-      "comment": "Temperature of a grass covered surface. This observed property is commonly recorded at meterological observing sites.",
+      "description": "Temperature of a grass covered surface. This observed property is commonly recorded at meterological observing sites.",
       "term_status": "unstable"
     },
     {
       "@id": "uo:concrete-surface-temperature",
-      "label": "concrete surface temperature",
+      "label": "Concrete surface temperature",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
         "uo:degree-celsius"
       ],
-      "comment": "Temperature of a concrete surface. This observed property is commonly recorded at meterological observing sites.",
+      "description": "Temperature of a concrete surface. This observed property is commonly recorded at meterological observing sites.",
       "term_status": "unstable"
     },
     {
       "@id": "uo:soil-temperature",
-      "label": "soil temperature",
+      "label": "Soil temperature",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
         "uo:degree-celsius"
       ],
-      "comment": "Temperature of the soil. This observed property is commonly recorded at meterological observing sites, typically at multiple depths.",
+      "description": "Temperature of the soil. This observed property is commonly recorded at meterological observing sites, typically at multiple depths.",
       "term_status": "unstable"
     },
     {
       "@id": "uo:relative-humidity",
-      "label": "relative humidity",
+      "label": "Relative humidity",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
         "uo:percent"
       ],
-      "comment": "Relative humidity (RH) is the ratio of the partial pressure of water vapour to the equilibrium vapour pressure of water at a given temperature. Relative humidity depends on temperature and the pressure of the system of interest.",
+      "description": "Relative humidity (RH) is the ratio of the partial pressure of water vapour to the equilibrium vapour pressure of water at a given temperature. Relative humidity depends on temperature and the pressure of the system of interest.",
       "sameAs": [
         "qudtQuantityKind:RelativeHumidity", 
         "cf:relative_humidity"
@@ -87,12 +88,12 @@
     },
     {
       "@id": "uo:air-pressure",
-      "label": "air pressure",
+      "label": "Air pressure",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
         "uo:hectopascal"
       ],
-      "comment": "Air pressure is the force per unit area which would be exerted when the moving gas molecules of which the air is composed strike a theoretical surface of any orientation. This is the pressure recorded at the elevation and altitude of the pressure sensor and has NOT been corrected to mean sea level.",
+      "description": "Air pressure is the force per unit area which would be exerted when the moving gas molecules of which the air is composed strike a theoretical surface of any orientation. This is the pressure recorded at the elevation and altitude of the pressure sensor and has NOT been corrected to mean sea level.",
       "sameAs": [
         "cf:air_pressure"
       ],
@@ -100,12 +101,12 @@
     },
     {
       "@id": "uo:air-pressure-at-mean-sea-level",
-      "label": "air pressure at mean sea level",
+      "label": "Air pressure at mean sea level",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
         "uo:hectopascal"
       ],
-      "comment": "Air pressure at sea level is the quantity often abbreviated as MSLP or PMSL. Air pressure is the force per unit area which would be exerted when the moving gas molecules of which the air is composed strike a theoretical surface of any orientation. 'Mean sea level' means the time mean of sea surface elevation at a given location over an arbitrary period sufficient to eliminate the tidal signals.",
+      "description": "Air pressure at sea level is the quantity often abbreviated as MSLP or PMSL. Air pressure is the force per unit area which would be exerted when the moving gas molecules of which the air is composed strike a theoretical surface of any orientation. 'Mean sea level' means the time mean of sea surface elevation at a given location over an arbitrary period sufficient to eliminate the tidal signals.",
       "sameAs": [
         "cf:air_pressure_at_mean_sea_level"
       ],
@@ -113,12 +114,12 @@
     },
     {
       "@id": "uo:wind-speed",
-      "label": "wind speed",
+      "label": "Wind speed",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
         "uo:metre-per-second"
       ],
-      "comment": "Speed is the magnitude of velocity. Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.) The wind speed is the magnitude of the wind velocity.",
+      "description": "Speed is the magnitude of velocity. Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.) The wind speed is the magnitude of the wind velocity.",
       "sameAs": [
         "cf:wind_speed"
       ],
@@ -126,12 +127,12 @@
     },
     {
       "@id": "uo:wind-gust-speed",
-      "label": "wind speed",
+      "label": "Wind gust speed",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
         "uo:metre-per-second"
       ],
-      "comment": "Speed is the magnitude of velocity. Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.) The wind speed is the magnitude of the wind velocity. A gust is a sudden brief period of high wind speed. In an observed timeseries of wind speed, the gust wind speed can be indicated by a maximum for the time-interval.",
+      "description": "Speed is the magnitude of velocity. Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.) The wind speed is the magnitude of the wind velocity. A gust is a sudden brief period of high wind speed. In an observed timeseries of wind speed, the gust wind speed can be indicated by a maximum for the time-interval.",
       "sameAs": [
         "cf:wind_speed"
       ],
@@ -139,12 +140,12 @@
     },
     {
       "@id": "uo:wind-direction",
-      "label": "wind direction",
+      "label": "Wind direction",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
         "uo:degree"
       ],
-      "comment": "Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. Given as the direction the wind has come FROM. I.e. 90° would represent an easterly wind direction from east to west.",
+      "description": "Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. Given as the direction the wind has come FROM. I.e. 90° would represent an easterly wind direction from east to west.",
       "sameAs": [
         "cf:wind_from_direction"
       ],
@@ -152,42 +153,42 @@
     },
     {
       "@id": "uo:wind-gust-direction",
-      "label": "wind gust direction",
+      "label": "Wind gust direction",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
         "uo:degree"
       ],
-      "comment": "Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. Given as the direction the wind has come FROM. I.e. 90° would represent an easterly wind direction from east to west. Typically given in combination with a uo:WindGustSpeed observation, with the uo:WindGustDirection indicating the direction the maximum wind speeds came from.",
+      "description": "Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. Given as the direction the wind has come FROM. I.e. 90° would represent an easterly wind direction from east to west. Typically given in combination with a uo:WindGustSpeed observation, with the uo:WindGustDirection indicating the direction the maximum wind speeds came from.",
       "term_status": "unstable"
     },
     {
       "@id": "uo:precipitation-depth",
-      "label": "precipitation depth",
+      "label": "Precipitation depth",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
         "uo:millimetre"
       ],
-      "comment": "An indication of the average depth of precipitation. Provided over a specified time window. Tipping bucket rain gauges typically convert precipitation volume into a depth based on the area of the gauge.",
+      "description": "An indication of the average depth of precipitation. Provided over a specified time window. Tipping bucket rain gauges typically convert precipitation volume into a depth based on the area of the gauge.",
       "term_status": "unstable"
     },
     {
       "@id": "uo:precipitation-rate",
-      "label": "precipitation rate",
+      "label": "Precipitation rate",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
         "uo:millimetre-per-hour"
       ],
-      "comment": "Indicates how heavy the precipitation is as an expected depth of precipitaton per fixed time frame, e.g. millimetres per hour.",
+      "description": "Indicates how heavy the precipitation is as an expected depth of precipitaton per fixed time frame, e.g. millimetres per hour.",
       "term_status": "unstable"
     },
     {
       "@id": "uo:solar-radiation",
-      "label": "solar radiation",
+      "label": "Solar radiation",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
         "uo:watt-per-square-metre"
       ],
-      "comment": "Solar radiation is the power per unit area received from the Sun in the form of electromagnetic radiation as reported in the wavelength range of the measuring instrument. A measure of the total incoming (direct and diffuse) solar radiation. Typically measured with a pyranometer.",
+      "description": "Solar radiation is the power per unit area received from the Sun in the form of electromagnetic radiation as reported in the wavelength range of the measuring instrument. A measure of the total incoming (direct and diffuse) solar radiation. Typically measured with a pyranometer.",
       "sameAs": [
         "cf:solar_irradiance"
       ],
@@ -195,53 +196,53 @@
     },
     {
       "@id": "uo:lightning-count",
-      "label": "lightning count",
+      "label": "Lightning count",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
         "uo:count"
       ],
-      "comment": "The number of lightning counts detected over a time period. Observations of lighting counts MUST include a phenomenonTime object detailing the start and end of this time period.",
+      "description": "The number of lightning counts detected over a time period. Observations of lighting counts MUST include a phenomenonTime object detailing the start and end of this time period.",
       "term_status": "unstable"
     },
     {
       "@id": "uo:lightning-distance",
-      "label": "lightning distance",
+      "label": "Lightning distance",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
         "uo:kilometre"
       ],
-      "comment": "The distance from the sensor to the observed lightning strike.",
+      "description": "The distance from the sensor to the observed lightning strike.",
       "term_status": "unstable"
     },
     {
       "@id": "uo:vapour-pressure",
-      "label": "vapour pressure",
+      "label": "Vapour pressure",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
         "uo:kilopascal",
         "uo:hectopascal"
       ],
-      "comment": "The pressure exerted by a vapour in thermodynamic equilibrium with its condensed phases (solid or liquid) at a given temperature in a closed system.",
+      "description": "The pressure exerted by a vapour in thermodynamic equilibrium with its condensed phases (solid or liquid) at a given temperature in a closed system.",
       "term_status": "unstable"
     },
     {
       "@id": "uo:battery-voltage",
-      "label": "battery voltage",
+      "label": "Battery voltage",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
         "uo:volt"
       ],
-      "comment": "The voltage reading of a battery.",
+      "description": "The voltage reading of a battery.",
       "term_status": "unstable"
     },
     {
       "@id": "uo:battery-remaining",
-      "label": "battery remaining",
+      "label": "Battery remaining",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
         "uo:percent"
       ],
-      "comment": "The percentage of battery remaining.",
+      "description": "The percentage of battery remaining.",
       "term_status": "unstable"
     },
     {
@@ -251,7 +252,7 @@
       "recommendedUnits": [
         "uo:decibel"
       ],
-      "comment": "A-weighted equivalent continuous sound level in decibels measured over a stated period of time. A-weighting is a filter applied to the sound pressure level in an effort to account for the relative loudness perceived by the human ear, which is less sensitive to low audio frequencies. This means that A-weighted measurements correlate well with the perceived loudness at low sound levels.",
+      "description": "A-weighted equivalent continuous sound level in decibels measured over a stated period of time. A-weighting is a filter applied to the sound pressure level in an effort to account for the relative loudness perceived by the human ear, which is less sensitive to low audio frequencies. This means that A-weighted measurements correlate well with the perceived loudness at low sound levels.",
       "term_status": "unstable"
     },
     {
@@ -261,7 +262,7 @@
       "recommendedUnits": [
         "uo:decibel"
       ],
-      "comment": "The maximum noise level with A-weighted frequency response and Fast time constant. A-weighting is a filter applied to the sound pressure level in an effort to account for the relative loudness perceived by the human ear, which is less sensitive to low audio frequencies. This means that A-weighted measurements correlate well with the perceived loudness at low sound levels. 'Fast time constant' means that only audio signals with a rise and decay time of up to 125 ms are considered.",
+      "description": "The maximum noise level with A-weighted frequency response and Fast time constant. A-weighting is a filter applied to the sound pressure level in an effort to account for the relative loudness perceived by the human ear, which is less sensitive to low audio frequencies. This means that A-weighted measurements correlate well with the perceived loudness at low sound levels. 'Fast time constant' means that only audio signals with a rise and decay time of up to 125 ms are considered.",
       "term_status": "unstable"
     },
     {
@@ -271,7 +272,7 @@
       "recommendedUnits": [
         "uo:decibel"
       ],
-      "comment": "A-weighted, sound level exceeded for 10% of the measurement period. A-weighting is a filter applied to the sound pressure level in an effort to account for the relative loudness perceived by the human ear, which is less sensitive to low audio frequencies. This means that A-weighted measurements correlate well with the perceived loudness at low sound levels. LA10 is extensively used for rating traffic noise",
+      "description": "A-weighted, sound level exceeded for 10% of the measurement period. A-weighting is a filter applied to the sound pressure level in an effort to account for the relative loudness perceived by the human ear, which is less sensitive to low audio frequencies. This means that A-weighted measurements correlate well with the perceived loudness at low sound levels. LA10 is extensively used for rating traffic noise",
       "term_status": "unstable"
     },
     {
@@ -281,7 +282,7 @@
       "recommendedUnits": [
         "uo:decibel"
       ],
-      "comment": "A-weighted, sound level exceeded for 50% of the measurement period. A-weighting is a filter applied to the sound pressure level in an effort to account for the relative loudness perceived by the human ear, which is less sensitive to low audio frequencies. This means that A-weighted measurements correlate well with the perceived loudness at low sound levels.",
+      "description": "A-weighted, sound level exceeded for 50% of the measurement period. A-weighting is a filter applied to the sound pressure level in an effort to account for the relative loudness perceived by the human ear, which is less sensitive to low audio frequencies. This means that A-weighted measurements correlate well with the perceived loudness at low sound levels.",
       "term_status": "unstable"
     },
     {
@@ -291,7 +292,7 @@
       "recommendedUnits": [
         "uo:decibel"
       ],
-      "comment": "A-weighted, sound level exceeded for 90% of the measurement period. A-weighting is a filter applied to the sound pressure level in an effort to account for the relative loudness perceived by the human ear, which is less sensitive to low audio frequencies. This means that A-weighted measurements correlate well with the perceived loudness at low sound levels. LA90 is extensively used for rating background noise",
+      "description": "A-weighted, sound level exceeded for 90% of the measurement period. A-weighting is a filter applied to the sound pressure level in an effort to account for the relative loudness perceived by the human ear, which is less sensitive to low audio frequencies. This means that A-weighted measurements correlate well with the perceived loudness at low sound levels. LA90 is extensively used for rating background noise",
       "term_status": "unstable"
     },
     {
@@ -301,7 +302,7 @@
       "recommendedUnits": [
         "uo:decibel"
       ],
-      "comment": "C-weighted equivalent continuous sound level in decibels measured over a stated period of time. C-weighting is a filter applied to the sound pressure level in order to describe the response of the human ear to high noise levels. C-weighted measurements are commonly used to assess the effect of impulse noises on the human ear.",
+      "description": "C-weighted equivalent continuous sound level in decibels measured over a stated period of time. C-weighting is a filter applied to the sound pressure level in order to describe the response of the human ear to high noise levels. C-weighted measurements are commonly used to assess the effect of impulse noises on the human ear.",
       "term_status": "unstable"
     },
     {
@@ -311,7 +312,7 @@
       "recommendedUnits": [
         "uo:decibel"
       ],
-      "comment": "The maximum noise level with C-weighted frequency response and Fast time constant. C-weighted equivalent continuous sound level in decibels measured over a stated period of time. C-weighting is a filter applied to the sound pressure level in order to describe the response of the human ear to high noise levels. C-weighted measurements are commonly used to assess the effect of impulse noises on the human ear. 'Fast time constant' means that only audio signals with a rise and decay time of up to 125 ms are considered.",
+      "description": "The maximum noise level with C-weighted frequency response and Fast time constant. C-weighted equivalent continuous sound level in decibels measured over a stated period of time. C-weighting is a filter applied to the sound pressure level in order to describe the response of the human ear to high noise levels. C-weighted measurements are commonly used to assess the effect of impulse noises on the human ear. 'Fast time constant' means that only audio signals with a rise and decay time of up to 125 ms are considered.",
       "term_status": "unstable"
     },
     {
@@ -321,7 +322,7 @@
       "recommendedUnits": [
         "uo:decibel"
       ],
-      "comment": "C-weighted, sound level exceeded for 10% of the measurement period. C-weighting is a filter applied to the sound pressure level in order to describe the response of the human ear to high noise levels. C-weighted measurements are commonly used to assess the effect of impulse noises on the human ear.",
+      "description": "C-weighted, sound level exceeded for 10% of the measurement period. C-weighting is a filter applied to the sound pressure level in order to describe the response of the human ear to high noise levels. C-weighted measurements are commonly used to assess the effect of impulse noises on the human ear.",
       "term_status": "unstable"
     },
     {
@@ -331,7 +332,7 @@
       "recommendedUnits": [
         "uo:decibel"
       ],
-      "comment": "C-weighted, sound level exceeded for 50% of the measurement period. C-weighting is a filter applied to the sound pressure level in order to describe the response of the human ear to high noise levels. C-weighted measurements are commonly used to assess the effect of impulse noises on the human ear.",
+      "description": "C-weighted, sound level exceeded for 50% of the measurement period. C-weighting is a filter applied to the sound pressure level in order to describe the response of the human ear to high noise levels. C-weighted measurements are commonly used to assess the effect of impulse noises on the human ear.",
       "term_status": "unstable"
     },
     {
@@ -341,17 +342,17 @@
       "recommendedUnits": [
         "uo:decibel"
       ],
-      "comment": "C-weighted, sound level exceeded for 90% of the measurement period. C-weighting is a filter applied to the sound pressure level in order to describe the response of the human ear to high noise levels. C-weighted measurements are commonly used to assess the effect of impulse noises on the human ear.",
+      "description": "C-weighted, sound level exceeded for 90% of the measurement period. C-weighting is a filter applied to the sound pressure level in order to describe the response of the human ear to high noise levels. C-weighted measurements are commonly used to assess the effect of impulse noises on the human ear.",
       "term_status": "unstable"
     },
     {
       "@id": "uo:tilt-north-south",
-      "label": "tilt (north/south)",
+      "label": "Tilt (north/south)",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
         "uo:degree"
       ],
-      "comment": "The degree to which a something (e.g. a sensor platform) has been tilted from an upright position in the north/south direction. North is positive, south is negative. When the thing being measured is directly upright the value is 0°. If it tilts towards the northerly direction the value will increase. If it tilts towards the southerly direction the value will decrease. For example, if the tilt of a metal post was being measured, and the post was knocked 10° from its upright direction towards the south the value would be -10°. If it was pushed back towards the north and fell completely flat on the ground the value would be +90°.",
+      "description": "The degree to which a something (e.g. a sensor platform) has been tilted from an upright position in the north/south direction. North is positive, south is negative. When the thing being measured is directly upright the value is 0°. If it tilts towards the northerly direction the value will increase. If it tilts towards the southerly direction the value will decrease. For example, if the tilt of a metal post was being measured, and the post was knocked 10° from its upright direction towards the south the value would be -10°. If it was pushed back towards the north and fell completely flat on the ground the value would be +90°.",
       "term_status": "unstable"
     },
     {
@@ -361,17 +362,17 @@
       "recommendedUnits": [
         "uo:degree"
       ],
-      "comment": "The degree to which a something (e.g. a sensor platform) has been tilted from an upright position in the west/east direction. West is positive, east is negative. When the thing being measured is directly upright the value is 0°. If it tilts towards the westerly direction the value will increase. If it tilts towards the easterly direction the value will decrease. For example, if the tilt of a metal post was being measured, and the post was knocked 10° from its upright direction towards the east the value would be -10°. If it was pushed back towards the west and fell completely flat on the ground the value would be +90°.",
+      "description": "The degree to which a something (e.g. a sensor platform) has been tilted from an upright position in the west/east direction. West is positive, east is negative. When the thing being measured is directly upright the value is 0°. If it tilts towards the westerly direction the value will increase. If it tilts towards the easterly direction the value will decrease. For example, if the tilt of a metal post was being measured, and the post was knocked 10° from its upright direction towards the east the value would be -10°. If it was pushed back towards the west and fell completely flat on the ground the value would be +90°.",
       "term_status": "unstable"
     },
     {
       "@id": "uo:pm1-mass-concentration",
-      "label": "PM₁ Mass Concentration",
+      "label": "PM₁ mass concentration",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
         "uo:microgram-per-cubic-metre"
       ],
-      "comment": "PM1 is particulate matter 1 micrometers or less in diameter. Mass concentration means mass per unit volume.",
+      "description": "PM1 is particulate matter 1 micrometers or less in diameter. Mass concentration means mass per unit volume.",
       "sameAs": [
         "cf:mass_concentration_of_pm1_ambient_aerosol_particles_in_air"
       ],
@@ -379,12 +380,12 @@
     },
     {
       "@id": "uo:pm2p5-mass-concentration",
-      "label": "PM₂.₅ Mass Concentration",
+      "label": "PM₂.₅ mass concentration",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
         "uo:microgram-per-cubic-metre"
       ],
-      "comment": "PM1 is particulate matter 2.5 micrometers or less in diameter. Mass concentration means mass per unit volume.",
+      "description": "PM1 is particulate matter 2.5 micrometers or less in diameter. Mass concentration means mass per unit volume.",
       "sameAs": [
         "cf:mass_concentration_of_pm2p5_ambient_aerosol_particles_in_air"
       ],
@@ -392,12 +393,12 @@
     },
     {
       "@id": "uo:pm10-mass-concentration",
-      "label": "PM₁₀ Mass Concentration",
+      "label": "PM₁₀ mass concentration",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
         "uo:microgram-per-cubic-metre"
       ],
-      "comment": "PM10 is particulate matter 10 micrometers or less in diameter. Mass concentration means mass per unit volume.",
+      "description": "PM10 is particulate matter 10 micrometers or less in diameter. Mass concentration means mass per unit volume.",
       "sameAs": [
         "cf:mass_concentration_of_pm10_ambient_aerosol_particles_in_air"
       ],
@@ -405,12 +406,12 @@
     },
     {
       "@id": "uo:received-signal-strength-indicator",
-      "label": "received signal strength indicator",
+      "label": "RSSI",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
         "uo:decibel"
       ],
-      "comment": "Received Signal Strength Indicator (RSSI) is a measurement of the power present in a received radio signal.",
+      "description": "Received Signal Strength Indicator (RSSI) is a measurement of the power present in a received radio signal.",
       "term_status": "unstable"
     }
   ]

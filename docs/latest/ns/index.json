@@ -28,8 +28,8 @@
       "@type": "@id"
     },
 
-    "comment": "rdfs:comment",
     "label": "rdfs:label",
+    "description": "schema:description",
     "preferredPrefix": "http://purl.org/vocab/vann/preferredNamespacePrefix",
     "domain": {
       "@id": "rdfs:domain",
@@ -67,7 +67,7 @@
   "@type": "owl:Ontology",
 
   "label": "The Urban Observatory Core Vocabulary",
-  "comment": "A vocabulary for linked sensor networks and observations",
+  "description": "A vocabulary for linked sensor networks and observations",
   "preferredPrefix": "uo",
   
   "recommendedUnits": "uo:recommendedUnit",
@@ -84,7 +84,7 @@
       "@id": "uo:Collection",
       "@type": "rdfs:Class",
       "label": "collection",
-      "comment": "A collection of resources",
+      "description": "A collection of resources",
       "term_status": "unstable",
       "subClassOf": "rdfs:Container"
     },
@@ -92,7 +92,7 @@
       "@id": "uo:hasMember",
       "@type": "rdf:Property",
       "label": "has member",
-      "comment": "A member of a collection",
+      "description": "A member of a collection",
       "term_status": "unstable",
       "domain": "uo:Collection",
       "subPropertyOf": "rdf:member"
@@ -100,16 +100,18 @@
     {
       "@id": "uo:ObservableProperty",
       "@type": "rdfs:Class",
+      "label": "observable property",
       "sameAs": "sosa:ObservableProperty",
-      "comment": "An observable quality (property, characteristic).",
+      "description": "An observable quality (property, characteristic).",
       "domain": "sosa:Observation",
       "term_status": "unstable"
     },
     {
       "@id": "uo:Discipline",
       "@type": "rdfs:Class",
+      "label": "discipline",
       "sameAs": "qudt:Discipline",
-      "comment": "The fields of expertise to which an observation is relevent.",
+      "description": "The fields of expertise to which an observation is relevent.",
       "domain": "sosa:Observation",
       "term_status": "unstable"
     },
@@ -117,7 +119,7 @@
       "@id": "uo:Unit",
       "@type": "rdfs:Class",
       "label": "unit",
-      "comment": "The unit of measure.",
+      "description": "The unit of measure.",
       "domain": "sosa:Observation",
       "sameAs": "qudt:Unit",
       "term_status": "unstable"
@@ -126,7 +128,7 @@
       "@id": "uo:FeatureOfInterest",
       "@type": "rdfs:Class",
       "label": "feature of interest",
-      "comment": "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a result.",
+      "description": "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a result.",
       "domain": "sosa:Observation",
       "sameAs": "sosa:FeatureOfInterest",
       "term_status": "unstable"
@@ -134,10 +136,10 @@
     {
       "@id": "uo:recommendedUnit",
       "@type": "rdf:Property",
+      "label": "recommended unit",
       "domain": "uo:ObservableProperty",
       "range": "uo:Unit",
-      "label": "recommended unit",
-      "comment": "Observations with this observed property are typically provided in this unit of measure. Other units may still be used but the alternative unit MUST be explicitly defined.",
+      "description": "Observations with this observed property are typically provided in this unit of measure. Other units may still be used but the alternative unit MUST be explicitly defined.",
       "term_status": "unstable"
     }
   ]

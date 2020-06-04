@@ -43,10 +43,22 @@ In addition, a term definition *MAY* include:
 
 ## Naming conventions
 
-The following table describes which *case* MUST be used when adding new definitions of a certain type. Note the use of compact IRIs, e.g. using the prefix `uo:`. 
+### @id's
+
+The following table describes which *case* MUST be used for the `@id` of new definitions. Note the use of compact IRIs, e.g. using the prefix `uo:`. 
 
 Definition Type | Case | Examples
 --- | --- | ---
 Class | PascalCase | `uo:Discipline`, `uo:ObservableProperty`, `uo:Collection`
 Property | camelCase | `uo:recommendedUnit`, `uo:hasMember`
 Instances | kebab-case | `uo:atmospheric-chemistry`, `uo:air-temperature`, `uo:millimetre`, `uo:earth-atmosphere`
+
+### label's
+
+The `label` property of *instances* should be short, but meaningful. The `description` can always be used to provide more detail. In most cases the first word in the label should be capitalised, e.g.: `Air temperature` or `Atmospheric chemistry`. However labels are allowed to break this rule if it results in the label having more meaning. Take the following examples:
+
+- The unit `Degree Celsius` - Because `Celsius` is a surname it is appropriate to capitalise it too. 
+- The observed property `PM₁₀ mass concentration` - The common approach to writing particulate matter is to abbreviate it to `PM` and therefore writting it as `Pm` would cause confusion, thus we use the common convention.
+- The observed property `RSSI` - *received signal strength indicator* is far more commonly written as *RSSI* and therefore this is more appropriate for use as a label.
+
+The benefit of this approach to capitalisation is that end-users can choose to use the capitalised form, or they can easily convert the whole string to the lowercase if they wish. It would be much harder to go in the other direction, i.e. we define it in all lowercase and force the end-user to correctly capitalise it.
