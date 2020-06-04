@@ -357,7 +357,7 @@
     },
     {
       "@id": "uo:tilt-west-east",
-      "label": "tilt (west/east)",
+      "label": "Tilt (west/east)",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
         "uo:degree"
