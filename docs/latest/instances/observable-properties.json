@@ -5,6 +5,8 @@
     "vs": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
     "owl": "http://www.w3.org/2002/07/owl#",
     "schema": "https://schema.org/",
+    "cf": "http://cfconventions.org/Data/cf-standard-names/47/build/cf-standard-name-table.html#",
+    "eionet": "http://dd.eionet.europa.eu/vocabularyconcept/aq/pollutant/",
 
     "defines": {
       "@reverse": "rdfs:isDefinedBy"
@@ -374,7 +376,8 @@
       ],
       "description": "PM1 is particulate matter 1 micrometers or less in diameter. Mass concentration means mass per unit volume.",
       "sameAs": [
-        "cf:mass_concentration_of_pm1_ambient_aerosol_particles_in_air"
+        "cf:mass_concentration_of_pm1_ambient_aerosol_particles_in_air",
+        "eionet:6002"
       ],
       "term_status": "unstable"
     },
@@ -385,9 +388,10 @@
       "recommendedUnits": [
         "uo:microgram-per-cubic-metre"
       ],
-      "description": "PM1 is particulate matter 2.5 micrometers or less in diameter. Mass concentration means mass per unit volume.",
+      "description": "PM2.5 is particulate matter 2.5 micrometers or less in diameter. Mass concentration means mass per unit volume.",
       "sameAs": [
-        "cf:mass_concentration_of_pm2p5_ambient_aerosol_particles_in_air"
+        "cf:mass_concentration_of_pm2p5_ambient_aerosol_particles_in_air",
+        "eionet:6001"
       ],
       "term_status": "unstable"
     },
@@ -400,7 +404,73 @@
       ],
       "description": "PM10 is particulate matter 10 micrometers or less in diameter. Mass concentration means mass per unit volume.",
       "sameAs": [
-        "cf:mass_concentration_of_pm10_ambient_aerosol_particles_in_air"
+        "cf:mass_concentration_of_pm10_ambient_aerosol_particles_in_air",
+        "eionet:5"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:sulphur-dioxide-mass-concentration",
+      "label": "Sulphur dioxide",
+      "@type": "uo:ObservableProperty",
+      "recommendedUnits": [
+        "uo:microgram-per-cubic-metre"
+      ],
+      "description": "Sulphur dioxide mass concentration in air",
+      "sameAs": [
+        "eionet:1"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:ozone-mass-concentration",
+      "label": "Ozone",
+      "@type": "uo:ObservableProperty",
+      "recommendedUnits": [
+        "uo:microgram-per-cubic-metre"
+      ],
+      "description": "Ozone (O₃) mass concentration in air",
+      "sameAs": [
+        "eionet:7"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:nitrogen-dioxide-mass-concentration",
+      "label": "Nitrogen dioxide",
+      "@type": "uo:ObservableProperty",
+      "recommendedUnits": [
+        "uo:microgram-per-cubic-metre"
+      ],
+      "description": "Nitrogen dioxide (NO₂) mass concentration in air",
+      "sameAs": [
+        "eionet:8"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:nitrogen-oxides-mass-concentration",
+      "label": "Nitrogen oxides",
+      "@type": "uo:ObservableProperty",
+      "recommendedUnits": [
+        "uo:microgram-per-cubic-metre"
+      ],
+      "description": "Nitrogen oxides (NOx) mass concentration in air. NOx as NO₂, i.e. the mass concentration of NOx that has been calculated from a concentration assuming that 100% of the NOx is NO₂.",
+      "sameAs": [
+        "eionet:9"
+      ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:nitrogen-monoxide-mass-concentration",
+      "label": "Nitrogen monoxide",
+      "@type": "uo:ObservableProperty",
+      "recommendedUnits": [
+        "uo:microgram-per-cubic-metre"
+      ],
+      "description": "Nitrogen monoxide (NO) mass concentration in air",
+      "sameAs": [
+        "eionet:38"
       ],
       "term_status": "unstable"
     },
