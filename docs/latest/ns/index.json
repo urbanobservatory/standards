@@ -15,7 +15,6 @@
     "qudtDiscipline": "http://qudt.org/2.1/vocab/discipline#",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn": "http://www.w3.org/ns/ssn/",
-    "cf": "http://cfconventions.org/Data/cf-standard-names/47/build/cf-standard-name-table.html#",
 
     "defines": {
       "@reverse": "rdfs:isDefinedBy"
