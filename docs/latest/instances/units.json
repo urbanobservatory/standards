@@ -94,6 +94,14 @@
       "term_status": "unstable"
     },
     {
+      "@id": "uo:metre",
+      "@type": "uo:Unit",
+      "label": "Metre",
+      "symbol": "m",
+      "description": "Unit of distance. The SI base unit of length.",
+      "term_status": "unstable"
+    },
+    {
       "@id": "uo:millimetre-per-hour",
       "@type": "uo:Unit",
       "label": "Millimetre per hour",

@@ -483,6 +483,16 @@
       ],
       "description": "Received Signal Strength Indicator (RSSI) is a measurement of the power present in a received radio signal.",
       "term_status": "unstable"
+    },
+    {
+      "@id": "uo:water-level",
+      "label": "Water level",
+      "@type": "uo:ObservableProperty",
+      "recommendedUnits": [
+        "uo:meter"
+      ],
+      "description": "Level of the water as measured in rivers and canals for flood monitoring and warning purposes.",
+      "term_status": "unstable"
     }
   ]
 }
