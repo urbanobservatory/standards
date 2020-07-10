@@ -489,7 +489,7 @@
       "label": "Water level",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
-        "uo:meter"
+        "uo:metre"
       ],
       "description": "Level of the water as measured in rivers and canals for flood monitoring and warning purposes.",
       "term_status": "unstable"

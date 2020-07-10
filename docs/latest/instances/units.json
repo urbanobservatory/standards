@@ -98,7 +98,7 @@
       "@type": "uo:Unit",
       "label": "Metre",
       "symbol": "m",
-      "description": "Unit of distance. The SI base unit of length.",
+      "description": "The metre (Commonwealth spelling) or meter (American spelling) is the base unit of length in the International System of Units (SI). The metre is defined as the length of the path travelled by monochromatic light in a vacuum in 1/299,792,458 of a second. The metre is used to measure distances, lengths, depths and widths.",
       "term_status": "unstable"
     },
     {
