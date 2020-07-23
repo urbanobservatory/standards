@@ -120,6 +120,21 @@
       .table--query-params thead, .table--query-params th {
         background: #ccf0ff;
       }
+
+      .class-def {
+        background: #C7EAE5;
+        padding: 0.5rem;
+      }
+
+      .class-def__table {
+        border-collapse: collapse;
+      }
+
+      .class-def__table th, td {
+        border: 1px solid #646363;
+        padding: 10px;
+      }
+
     </style>
   </head>
   <body>
@@ -350,35 +365,77 @@
       <section id="struct-sensor">
         <h3>Sensor networks and observations</h3>
 
-        <section id="struct-sensor-platform">
+        <section id="Platform" class="class-def">
           <h4>Platform</h4>
+          <p><strong>IRI:</strong> http://www.urbanobservatory.com/ns/Platform</p>
+          <p><strong>Type:</strong> <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a></p>
+          <p><strong>Same as:</strong> <a href="https://www.w3.org/TR/vocab-ssn/#SOSAPlatform">sosa:Platform</a></p>
+          <p><em>Platform</em> - A <a href="#Platform">Platform</a> is an entity that hosts other entities, particularly <a href="#Sensor">Sensors</a> and other <a href="#Platform">Platforms</a>.</p>
+
+          <table class="class-def__table">
+            <tr>
+              <td>Examples</td>
+              <td>A tripod, wall, lighting column, car, drone, smartphone, weather station, can all act as a host for <a href="#Sensor">Sensor(s)</a> which would make them a <a href="#Platform">Platform</a>. As an example of a <a href="#Platform">Platform</a> hosting another <a href="#Platform">Platform</a>, a tripod (a <a href="#Platform">Platform</a>) may host a weather station (another <a href="#Platform">Platform</a>) which hosts various meteorological <a href="#Sensor">Sensors</a>. The tripod may also host other <a href="#Platform">Platforms</a>, or directly host other <a href="#Sensor">Sensors</a>.</td>
+            </tr>
+            <tr>
+              <td>Restrictions</td>
+              <td>
+                <ul>
+                  <li><a href="#inDeployment">uo:inDeployment</a> <strong>ONLY</strong> <a href="#Deployment">uo:Deployment</a></li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+
+          <aside class="example" title="Weather station">
+            <pre>
+              {
+                "@id": "climastation-583d93e", 
+                "@type": "uo:Platform",
+                "label": "ClimaStation (583d93e)",
+                "description": "A ClimaStation weather station comprising of temperature, humidity and pressure sensors.",
+                "inDeployment": "birmingham-climastations",
+                "isHostedBy": "school-tripod-43",
+                "location": {
+                  "type": "Feature",
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-1.821488, 52.444539]
+                  },
+                  "properties": {
+                    "height": 1.8  
+                  }
+                }
+              }
+            </pre>
+          </aside>
         </section>
 
-        <section id="struct-sensor-sensor">
+        <section id="Sensor">
           <h4>Sensor</h4>
         </section>
 
-        <section id="struct-sensor-observation">
+        <section id="Observation">
           <h4>Observation</h4>
         </section>
 
-        <section id="struct-sensor-sampling">
+        <section id="Sampling">
           <h4>Sampling</h4>
         </section>
 
-        <section id="struct-sensor-result">
+        <section id="Result">
           <h4>Result</h4>
         </section>
 
-        <section id="struct-sensor-deployment">
+        <section id="Deployment">
           <h4>Deployment</h4>
         </section>
 
-        <section id="struct-sensor-system">
+        <section id="System">
           <h4>System</h4>
         </section>
 
-        <section id="struct-sensor-featureofinterest">
+        <section id="FeatureOfInterest">
           <h4>Feature of interest</h4>
         </section>
 
