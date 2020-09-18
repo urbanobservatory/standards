@@ -485,6 +485,16 @@
       "term_status": "unstable"
     },
     {
+      "@id": "uo:location",
+      "label": "Location",
+      "@type": "uo:ObservableProperty",
+      "recommendedUnits": [
+        "uo:geojson-geometry"
+      ],
+      "description": "The location of something. Whilst location is commonly an additional metadata attribute of observations whose observable property is not 'location', there are some sensors, e.g. GPS modules/trackers, that specially measure location. Observations made by these sensors will have an observable property of 'location'. The data format and/or coordinate system of the location depends on the unit.",
+      "term_status": "unstable"
+    },
+    {
       "@id": "uo:water-level",
       "label": "Water level",
       "@type": "uo:ObservableProperty",
