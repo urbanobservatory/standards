@@ -571,7 +571,7 @@
       "recommendedUnits": [
         "uo:particles-per-cubic-centimetre"
       ],
-      "description": "Nitric oxide (NO) volume fraction in air.",
+      "description": "Particle count.",
       "term_status": "unstable"
     }
   ]
