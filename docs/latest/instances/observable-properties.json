@@ -396,6 +396,16 @@
       "term_status": "unstable"
     },
     {
+      "@id": "uo:pm4-mass-concentration",
+      "label": "PM₄ mass concentration",
+      "@type": "uo:ObservableProperty",
+      "recommendedUnits": [
+        "uo:microgram-per-cubic-metre"
+      ],
+      "description": "PM4 is particulate matter 4 micrometers or less in diameter. Mass concentration means mass per unit volume.",
+      "term_status": "unstable"
+    },
+    {
       "@id": "uo:pm10-mass-concentration",
       "label": "PM₁₀ mass concentration",
       "@type": "uo:ObservableProperty",
@@ -407,6 +417,16 @@
         "cf:mass_concentration_of_pm10_ambient_aerosol_particles_in_air",
         "eionet:5"
       ],
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:total-suspended-particulate-mass-concentration",
+      "label": "Total suspended particulate",
+      "@type": "uo:ObservableProperty",
+      "recommendedUnits": [
+        "uo:microgram-per-cubic-metre"
+      ],
+      "description": "The mass concentration of the total suspended particulate (TSP).",
       "term_status": "unstable"
     },
     {
@@ -502,6 +522,56 @@
         "uo:metre"
       ],
       "description": "Level of the water as measured in rivers and canals for flood monitoring and warning purposes.",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:wind-chill-temperature",
+      "label": "Wind chill temperature",
+      "@type": "uo:ObservableProperty",
+      "recommendedUnits": [
+        "uo:degree-celsius"
+      ],
+      "description": "Often referred to as the 'feels like' temperature. It is lower than the observed air temperature. The higher the wind speed the greater the difference from air temperature. A formula is used to make this correction based on the understanding of how heat is lost from the human body under windy conditions. Various formulas exists to do this. N.B. unlike heat index it does not factor in the current relative humidity.",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:heat-index-temperature",
+      "label": "Heat Index",
+      "@type": "uo:ObservableProperty",
+      "recommendedUnits": [
+        "uo:degree-celsius"
+      ],
+      "description": "Often referred to as the 'feels like' temperature. It combines air temperature and relative humdidty measurements to produce a human-percevied equivalent temperature. Under conditions with a high relative humidity the heat index temperature will be higher than the air temperature.",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:carbon-monoxide-volume-fraction",
+      "label": "Carbon monoxide",
+      "@type": "uo:ObservableProperty",
+      "recommendedUnits": [
+        "uo:parts-per-million"
+      ],
+      "description": "Carbon monoxide (CO) volume fraction in air.",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:nitric-oxide",
+      "label": "Nitric oxide",
+      "@type": "uo:ObservableProperty",
+      "recommendedUnits": [
+        "uo:parts-per-billion"
+      ],
+      "description": "Nitric oxide (NO) volume fraction in air.",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:particle-count",
+      "label": "Particle count",
+      "@type": "uo:ObservableProperty",
+      "recommendedUnits": [
+        "uo:particles-per-cubic-centimetre"
+      ],
+      "description": "Nitric oxide (NO) volume fraction in air.",
       "term_status": "unstable"
     }
   ]

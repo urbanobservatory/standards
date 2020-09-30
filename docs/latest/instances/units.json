@@ -186,6 +186,14 @@
       "term_status": "unstable"
     },
     {
+      "@id": "uo:particles-per-cubic-centimetre",
+      "@type": "uo:Unit",
+      "label": "Particles per cubic centimetre",
+      "symbol": "particles/cm³",
+      "description": "Number of particles in a cubic centimetre.",
+      "term_status": "unstable"
+    },
+    {
       "@id": "uo:microgram-per-cubic-metre",
       "@type": "uo:Unit",
       "label": "Microgram per cubic metre",
