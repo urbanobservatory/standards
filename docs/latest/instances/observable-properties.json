@@ -65,6 +65,16 @@
       "term_status": "unstable"
     },
     {
+      "@id": "uo:road-surface-temperature",
+      "label": "Road surface temperature",
+      "@type": "uo:ObservableProperty",
+      "recommendedUnits": [
+        "uo:degree-celsius"
+      ],
+      "description": "Temperature of a road surface. An important measurement for Winter Road Maintenance.",
+      "term_status": "unstable"
+    },
+    {
       "@id": "uo:soil-temperature",
       "label": "Soil temperature",
       "@type": "uo:ObservableProperty",
