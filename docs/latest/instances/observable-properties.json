@@ -565,13 +565,23 @@
       "term_status": "unstable"
     },
     {
-      "@id": "uo:nitric-oxide",
-      "label": "Nitric oxide",
+      "@id": "uo:nitrogen-monoxide-volume-fraction",
+      "label": "Nitrogen monoxide",
       "@type": "uo:ObservableProperty",
       "recommendedUnits": [
         "uo:parts-per-billion"
       ],
-      "description": "Nitric oxide (NO) volume fraction in air.",
+      "description": "Nitrogen monoxide (NO) volume fraction in air.",
+      "term_status": "unstable"
+    },
+    {
+      "@id": "uo:nitrogen-dioxide-volume-fraction",
+      "label": "Nitrogen dioxide",
+      "@type": "uo:ObservableProperty",
+      "recommendedUnits": [
+        "uo:parts-per-billion"
+      ],
+      "description": "Nitrogen dioxide (NO2) volume fraction in air.",
       "term_status": "unstable"
     },
     {
